@@ -1561,6 +1561,78 @@ function groupAreasForScatter(aptData) {
   });
 }
 
+// 이 평형(행) 하나의 세대수 출처 상태를 판정합니다 - 그룹 헤더가 하위 평형들의
+// 출처가 전부 같은지(registry/estimated/confirmed) 판단할 때도 재사용합니다.
+function getUnitsMode(item) {
+  if (item.units_source === "registry") return "registry";
+  return item.is_estimated_units ? "estimated" : "confirmed";
+}
+
+// 평형별 상세 데이터 그리드도 산점도와 같은 기준(SCATTER_AREA_GROUP_GAP, 2㎡ 이내)으로
+// 인접 평형을 묶습니다. 산점도 그룹핑과 달리 거래 0건인 평형도 포함해야 표에서 안
+// 빠지고(신축 등 미거래 평형도 보여줘야 함), 펼쳤을 때 보일 세부 평형 원본도 그대로
+// 들고 있어야 해서 별도 함수로 둡니다. 그룹 헤더의 세대수/거래량은 하위 평형 합산이고,
+// 팔림지수(회전율)는 그 합산값 기준으로 다시 계산합니다(개별 회전율의 평균이 아님 -
+// 세대수 가중치가 달라 평균을 내면 왜곡됩니다).
+function groupAreasForTable(aptData) {
+  const sorted = [...aptData].sort((a, b) => a.exclusive_area - b.exclusive_area);
+
+  const rawGroups = [];
+  for (const item of sorted) {
+    const last = rawGroups[rawGroups.length - 1];
+    const prevArea = last ? last[last.length - 1].exclusive_area : null;
+    if (last && item.exclusive_area - prevArea <= SCATTER_AREA_GROUP_GAP) {
+      last.push(item);
+    } else {
+      rawGroups.push([item]);
+    }
+  }
+
+  const { monthsCount } = getParsedMonths();
+
+  return rawGroups.map(members => {
+    const dominant = members.reduce((best, m) => (m.deals.length > best.deals.length ? m : best), members[0]);
+    const generation_count = members.reduce((sum, m) => sum + m.generation_count, 0);
+    const trade_count = members.reduce((sum, m) => sum + m.trade_count, 0);
+    const amounts = members.flatMap(m => m.deals || []).map(d => d.amount);
+    const turnover_rate = generation_count > 0 ? (trade_count / generation_count) * 100 : 0;
+    const annualized_rate = turnover_rate * (12 / monthsCount);
+
+    const modeSet = new Set(members.map(getUnitsMode));
+    const typeSet = new Set(members.map(m => m.unit_type || ""));
+
+    return {
+      apt_key: dominant.apt_key,
+      isGroup: members.length > 1,
+      members,
+      exclusive_area: dominant.exclusive_area,
+      supply_area: dominant.supply_area,
+      generation_count,
+      trade_count,
+      turnover_rate: parseFloat(turnover_rate.toFixed(4)),
+      annualized_rate: parseFloat(annualized_rate.toFixed(4)),
+      avg_deal_amount: amounts.length > 0 ? Math.round(amounts.reduce((a, b) => a + b, 0) / amounts.length) : 0,
+      min_deal_amount: amounts.length > 0 ? Math.min(...amounts) : 0,
+      max_deal_amount: amounts.length > 0 ? Math.max(...amounts) : 0,
+      is_rental_suspected: members.some(m => m.is_rental_suspected),
+      // 하위 평형들의 타입/출처가 전부 같을 때만 그룹 헤더에 대표값으로 보여줍니다 -
+      // 섞여 있으면(mixed) 헤더에는 생략하고, 펼쳤을 때 개별 배지로 확인합니다.
+      unit_type: typeSet.size === 1 ? [...typeSet][0] : "",
+      unitsMode: modeSet.size === 1 ? [...modeSet][0] : "mixed"
+    };
+  });
+}
+
+// 그룹 헤더 행의 평형 라벨 - 소수점 그대로 보여주면 특정 세부 평형만 표시된 것으로
+// 오해할 수 있어(산점도 그룹 라벨과 같은 이유), 정수로 반올림해 "35평형"처럼 보여줍니다.
+function formatTableGroupAreaLabel(group) {
+  const areaValue = Number(group.supply_area > 0 ? group.supply_area : group.exclusive_area);
+  if (!areaValue || areaValue <= 0) return "-";
+  return areaUnit === "pyeong"
+    ? `${Math.round(areaValue / SQM_PER_PYEONG)}평형`
+    : `${Math.round(areaValue)}㎡형`;
+}
+
 // 산점도 그룹은 비슷한 면적(SCATTER_AREA_GROUP_GAP 이내)을 하나로 합친 것이라, 대표값을
 // 소수점까지 그대로 보여주면 "61.7평"처럼 특정 세부 평형만 표시된 것으로 오해할 수 있습니다.
 // 그래서 정수 단위로 반올림해 "62평형"처럼 그룹 전체를 아우르는 명칭으로 보여줍니다.
@@ -1765,16 +1837,104 @@ function renderTable(aptName) {
   renderAptDashboard(aptName);
 }
 
-// 실질적으로 테이블을 그리는 동적 렌더러 함수
+// 연 환산 회전율(팔림지수)에 따른 상태 배지. 그룹 헤더 행과 개별(하위) 평형 행이
+// 공유해서 씁니다.
+function buildStatusBadgeHtml(annRate) {
+  if (annRate < 5) return `<span class="status-badge status-low">🐌 조금 힘들어요</span>`;
+  if (annRate < 10) return `<span class="status-badge status-stable">👌 무난해요</span>`;
+  return `<span class="status-badge status-active">🔥 잘 팔려요</span>`;
+}
+
+// 세대수 출처 배지. unitsMode가 "mixed"(그룹 안에 출처가 다른 하위 평형이 섞여 있음)면
+// 한 배지로 요약할 수 없으므로 생략합니다 - 펼치면 하위 행에서 개별 배지로 확인됩니다.
+function buildUnitsBadgeHtml(aptKey, unitsMode) {
+  if (unitTypesInFlight.has(aptKey)) {
+    return `<span class="units-source-badge units-loading" title="국토교통부 건축물대장 전유부(등기 원본)에서 실제 세대수를 조회하고 있습니다">⏳ 조회 중</span>`;
+  }
+  if (unitsMode === "registry") {
+    return `<span class="units-source-badge units-registry" title="국토교통부 건축물대장 전유부(등기 원본) 기준 실제 세대수 - 조합원 분양분 포함">실측</span>`;
+  }
+  if (unitsMode === "estimated") {
+    return `<span class="units-source-badge units-estimated" title="이 평형의 실제 세대수를 확인할 자료(등기 원본/청약홈 분양정보)가 없어, 총 세대수를 남은 평형 종류 수로 균등 안분한 값입니다. 실제 세대수와 다를 수 있습니다.">미확인</span>`;
+  }
+  if (unitsMode === "confirmed") {
+    return `<span class="units-source-badge units-confirmed" title="등기 원본이 아닌 청약홈 분양 공고 기준 일반+특별공급 세대수입니다. 조합원 분양분(재건축/재개발) 등은 반영되지 않아 실제 세대수보다 적을 수 있어 '실측'이 아닌 '예상'으로 표시합니다.">예상</span>`;
+  }
+  return "";
+}
+
+// 평형별 상세 데이터 그리드 한 행(그룹 헤더 또는 하위 평형)을 그립니다.
+function buildAreaRowHtml(item, opts = {}) {
+  const {
+    maxTradeCount = 0,
+    rowClass = "",
+    areaLabelPrefix = "",
+    areaLabel,
+    showToggleArrow = false
+  } = opts;
+
+  const rangeStr = item.trade_count > 0
+    ? `${formatKrw(item.min_deal_amount)} ~ ${formatKrw(item.max_deal_amount)}`
+    : "-";
+
+  const statusBadge = buildStatusBadgeHtml(item.annualized_rate);
+
+  // 베스트셀러 배지는 호출부가 넘긴 maxTradeCount 기준으로만 판단합니다 - 그룹 헤더를
+  // 그릴 때는 그룹(합산) 거래량 중 최댓값을, 하위 평형을 그릴 때는 0을 넘겨(호출부 참고)
+  // 그룹 안의 개별 평형에는 절대 붙지 않도록 합니다.
+  const bestSellerBadgeHtml = maxTradeCount > 0 && item.trade_count === maxTradeCount
+    ? `<span class="best-seller-badge" title="이 단지에서 조회 기간 동안 거래량이 가장 많았던 평형입니다">🏆 가장 잘 팔려요!</span>`
+    : "";
+
+  const typeLabelHtml = item.unit_type
+    ? `<span class="unit-type-badge" title="청약홈 분양정보 기준 주택형">${item.unit_type}타입</span>`
+    : "";
+
+  const unitsMode = item.unitsMode ?? getUnitsMode(item);
+  const unitsBadgeHtml = buildUnitsBadgeHtml(item.apt_key, unitsMode);
+
+  // 임대 추정 배지: K-apt(HOA 관리) 공식 총세대수로는 설명이 안 되고 건축물대장
+  // 표제부 총세대수까지 있어야 설명되는 평형입니다. 매매 실거래가 없는 것도
+  // 정황상 일치합니다(임대주택은 매매 대상이 아님). 다만 확정 데이터는 아니라서
+  // "추정"이라 표기하고, 근거를 툴팁에 그대로 밝힙니다.
+  const rentalBadgeHtml = item.is_rental_suspected
+    ? `<span class="units-source-badge units-rental" title="K-apt(입주자대표회의 관리) 공식 세대수에는 없고 건축물대장 표제부에만 등록된 세대입니다. 관리 주체가 다른 임대동일 가능성이 높지만, 공공데이터로 임대 여부 자체가 확정되지는 않아 추정으로 표시합니다.">🏠 임대 추정</span>`
+    : "";
+
+  const toggleArrowHtml = showToggleArrow ? `<span class="group-toggle-arrow">▸</span>` : "";
+  const resolvedAreaLabel = areaLabel ?? formatAreaPair(item.supply_area, item.exclusive_area);
+
+  return `
+    <tr class="${rowClass}">
+      <td class="font-outfit font-medium">${toggleArrowHtml}${areaLabelPrefix}${resolvedAreaLabel} ${typeLabelHtml} ${rentalBadgeHtml} ${bestSellerBadgeHtml}</td>
+      <td>${item.generation_count.toLocaleString()} 세대 ${unitsBadgeHtml}</td>
+      <td><span class="badge badge-cyan">${item.trade_count} 건</span></td>
+      <td>
+        <span class="badge badge-purple">${item.turnover_rate.toFixed(4)} %</span>
+        ${statusBadge}
+        <span style="font-size: 0.75rem; color: rgba(229, 231, 235, 0.5); display: block; margin-top: 4px;">
+          (연 환산: ${item.annualized_rate.toFixed(2)}%)
+        </span>
+      </td>
+      <td class="font-semibold">${formatKrw(item.avg_deal_amount)}</td>
+      <td class="text-secondary">${rangeStr}</td>
+    </tr>
+  `;
+}
+
+// 실질적으로 테이블을 그리는 동적 렌더러 함수. 실거래가 산점도와 같은 기준(2㎡ 이내)으로
+// 인접 평형을 묶어 그룹 헤더 행 하나로 보여주고, 클릭하면 하위 평형들이 펼쳐집니다.
 function renderTableData(aptData) {
   const tableBody = document.getElementById("tableBody");
-  
+
   if (aptData.length === 0) {
     tableBody.innerHTML = `<tr><td colspan="6" class="empty-row">데이터가 없습니다.</td></tr>`;
     return;
   }
-  
-  aptData.sort((a, b) => {
+
+  const groups = groupAreasForTable(aptData);
+
+  groups.sort((a, b) => {
     let valA = a[currentSort.key];
     let valB = b[currentSort.key];
 
@@ -1784,70 +1944,45 @@ function renderTableData(aptData) {
     return (valA - valB) * currentSort.direction;
   });
 
-  // 이 단지 안에서 거래량이 가장 많은 평형에 "가장 잘 팔려요!" 배지를 붙입니다.
+  // 이 단지 안에서 거래량이 가장 많은 그룹(평형)에 "가장 잘 팔려요!" 배지를 붙입니다.
   // 거래가 전부 0건이면(신축 등) 의미가 없으므로 붙이지 않습니다.
-  const maxTradeCount = Math.max(...aptData.map(item => item.trade_count));
+  const maxTradeCount = Math.max(...groups.map(g => g.trade_count));
 
-  tableBody.innerHTML = aptData
-    .map(item => {
-      const rangeStr = item.trade_count > 0
-        ? `${formatKrw(item.min_deal_amount)} ~ ${formatKrw(item.max_deal_amount)}`
-        : "-";
+  tableBody.innerHTML = groups
+    .map(group => {
+      const headerHtml = buildAreaRowHtml(group, {
+        maxTradeCount,
+        rowClass: group.isGroup ? "grid-group-row" : "",
+        showToggleArrow: group.isGroup,
+        areaLabel: group.isGroup ? formatTableGroupAreaLabel(group) : undefined
+      });
 
-      const annRate = item.annualized_rate;
-      let statusBadge = "";
-      if (annRate < 5) {
-        statusBadge = `<span class="status-badge status-low">🐌 조금 힘들어요</span>`;
-      } else if (annRate < 10) {
-        statusBadge = `<span class="status-badge status-stable">👌 무난해요</span>`;
-      } else {
-        statusBadge = `<span class="status-badge status-active">🔥 잘 팔려요</span>`;
-      }
+      if (!group.isGroup) return headerHtml;
 
-      const bestSellerBadgeHtml = maxTradeCount > 0 && item.trade_count === maxTradeCount
-        ? `<span class="best-seller-badge" title="이 단지에서 조회 기간 동안 거래량이 가장 많았던 평형입니다">🏆 가장 잘 팔려요!</span>`
-        : "";
+      const childRowsHtml = [...group.members]
+        .sort((a, b) => a.exclusive_area - b.exclusive_area)
+        .map(member => buildAreaRowHtml(member, {
+          rowClass: "grid-child-row hidden",
+          areaLabelPrefix: `<span class="child-tree-marker">ㄴ</span>`
+        }))
+        .join("");
 
-      const typeLabelHtml = item.unit_type
-        ? `<span class="unit-type-badge" title="청약홈 분양정보 기준 주택형">${item.unit_type}타입</span>`
-        : "";
-      let unitsBadgeHtml;
-      if (unitTypesInFlight.has(item.apt_key)) {
-        unitsBadgeHtml = `<span class="units-source-badge units-loading" title="국토교통부 건축물대장 전유부(등기 원본)에서 실제 세대수를 조회하고 있습니다">⏳ 조회 중</span>`;
-      } else if (item.units_source === "registry") {
-        unitsBadgeHtml = `<span class="units-source-badge units-registry" title="국토교통부 건축물대장 전유부(등기 원본) 기준 실제 세대수 - 조합원 분양분 포함">실측</span>`;
-      } else if (item.is_estimated_units) {
-        unitsBadgeHtml = `<span class="units-source-badge units-estimated" title="이 평형의 실제 세대수를 확인할 자료(등기 원본/청약홈 분양정보)가 없어, 총 세대수를 남은 평형 종류 수로 균등 안분한 값입니다. 실제 세대수와 다를 수 있습니다.">미확인</span>`;
-      } else {
-        unitsBadgeHtml = `<span class="units-source-badge units-confirmed" title="등기 원본이 아닌 청약홈 분양 공고 기준 일반+특별공급 세대수입니다. 조합원 분양분(재건축/재개발) 등은 반영되지 않아 실제 세대수보다 적을 수 있어 '실측'이 아닌 '예상'으로 표시합니다.">예상</span>`;
-      }
-
-      // 임대 추정 배지: K-apt(HOA 관리) 공식 총세대수로는 설명이 안 되고 건축물대장
-      // 표제부 총세대수까지 있어야 설명되는 평형입니다. 매매 실거래가 없는 것도
-      // 정황상 일치합니다(임대주택은 매매 대상이 아님). 다만 확정 데이터는 아니라서
-      // "추정"이라 표기하고, 근거를 툴팁에 그대로 밝힙니다.
-      const rentalBadgeHtml = item.is_rental_suspected
-        ? `<span class="units-source-badge units-rental" title="K-apt(입주자대표회의 관리) 공식 세대수에는 없고 건축물대장 표제부에만 등록된 세대입니다. 관리 주체가 다른 임대동일 가능성이 높지만, 공공데이터로 임대 여부 자체가 확정되지는 않아 추정으로 표시합니다.">🏠 임대 추정</span>`
-        : "";
-
-      return `
-        <tr>
-          <td class="font-outfit font-medium">${formatAreaPair(item.supply_area, item.exclusive_area)} ${typeLabelHtml} ${rentalBadgeHtml} ${bestSellerBadgeHtml}</td>
-          <td>${item.generation_count.toLocaleString()} 세대 ${unitsBadgeHtml}</td>
-          <td><span class="badge badge-cyan">${item.trade_count} 건</span></td>
-          <td>
-            <span class="badge badge-purple">${item.turnover_rate.toFixed(4)} %</span>
-            ${statusBadge}
-            <span style="font-size: 0.75rem; color: rgba(229, 231, 235, 0.5); display: block; margin-top: 4px;">
-              (연 환산: ${annRate.toFixed(2)}%)
-            </span>
-          </td>
-          <td class="font-semibold">${formatKrw(item.avg_deal_amount)}</td>
-          <td class="text-secondary">${rangeStr}</td>
-        </tr>
-      `;
+      return headerHtml + childRowsHtml;
     })
     .join("");
+
+  // 그룹 헤더 행을 클릭하면 바로 뒤에 이어지는(문서 순서상 항상 붙어서 그려짐)
+  // 하위 평형 행들을 펼치거나 접습니다.
+  tableBody.querySelectorAll(".grid-group-row").forEach(row => {
+    row.addEventListener("click", () => {
+      const expanded = row.classList.toggle("expanded");
+      let sibling = row.nextElementSibling;
+      while (sibling && sibling.classList.contains("grid-child-row")) {
+        sibling.classList.toggle("hidden", !expanded);
+        sibling = sibling.nextElementSibling;
+      }
+    });
+  });
 }
 
 const MAINTENANCE_AVERAGE_LOOKBACK_MONTHS = 24;

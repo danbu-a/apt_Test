@@ -527,6 +527,41 @@ select:focus {
   font-style: italic;
 }
 
+/* 평형별 상세 데이터 그리드 - 2㎡ 이내 인접 평형 묶음(그룹) 헤더/하위 행 */
+.grid-group-row {
+  cursor: pointer;
+}
+
+.group-toggle-arrow {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  transition: transform 0.15s ease;
+}
+
+.grid-group-row.expanded .group-toggle-arrow {
+  transform: rotate(90deg);
+}
+
+.grid-child-row {
+  background-color: hsla(228, 25%, 6%, 0.35);
+}
+
+.grid-child-row.hidden {
+  display: none;
+}
+
+.grid-child-row td:first-child {
+  padding-left: 32px;
+}
+
+.child-tree-marker {
+  color: var(--text-muted);
+  margin-right: 6px;
+  font-family: monospace;
+}
+
 /* Footer Styling */
 .app-footer {
   text-align: center;
