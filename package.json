@@ -1,0 +1,11 @@
+{
+  "name": "apt-turnover-calculator",
+  "version": "1.0.0",
+  "description": "Calculate apartment turnover rates by size/area",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {}
+}

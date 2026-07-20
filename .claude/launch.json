@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "apt-turnover-dashboard",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["index.js"],
+      "port": 3000
+    },
+    {
+      "name": "apt-turnover-dashboard-serve-only",
+      "runtimeExecutable": "env",
+      "runtimeArgs": ["SERVE_ONLY=true", "node", "index.js"],
+      "port": 3000
+    }
+  ]
+}

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아파트 평형별 거래회전율 대시보드</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom Sleek Styles -->
+  <link rel="stylesheet" href="dashboard.css">
+  
+  <!-- Lightweight Charting Library (Chart.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- 실거래가 산점도의 시간축(날짜) 표시용 어댑터 -->
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+
+  <!-- Flatpickr Datepicker CSS & JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/l10n/ko.js"></script>
+</head>
+<body>
+  <div class="glow-container">
+    <div class="glow-sphere sphere-1"></div>
+    <div class="glow-sphere sphere-2"></div>
+  </div>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <span class="badge">Real Estate Analytics</span>
+        <h1>아파트 평형별 거래회전율 대시보드</h1>
+      </div>
+      <div class="header-right">
+        <!-- Date Filter Relocated to Left Search Side -->
+      </div>
+    </header>
+
+    <!-- Main Grid Dashboard -->
+    <main class="dashboard-grid">
+      <!-- 1st Row: Unified Search & Google Map Panel -->
+      <section class="card search-and-map-panel">
+        <div class="search-form-side">
+          <div class="card-header" style="padding: 0 0 16px 0;">
+            <h3>단지 검색 및 조회</h3>
+            <span class="subtitle">행정구역 및 실시간 단지 검색</span>
+          </div>
+          <div class="control-grid-vertical">
+            <div class="control-group">
+              <label for="guSelect">구 선택</label>
+              <div class="select-wrapper">
+                <select id="guSelect">
+                  <option value="">구를 로딩 중...</option>
+                </select>
+              </div>
+            </div>
+            <div class="control-group">
+              <label for="dongSelect">동 선택</label>
+              <div class="select-wrapper">
+                <select id="dongSelect">
+                  <option value="">동을 선택하세요...</option>
+                </select>
+              </div>
+            </div>
+            <div class="control-group">
+              <label for="aptSelect">단지 선택</label>
+              <div class="select-wrapper">
+                <select id="aptSelect">
+                  <option value="" disabled selected>단지를 선택하세요...</option>
+                </select>
+              </div>
+            </div>
+            <div class="control-group search-group">
+              <label for="aptSearch">단지명 검색</label>
+              <div class="search-box">
+                <input type="text" id="aptSearch" placeholder="단지명 실시간 검색...">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="map-side">
+          <div class="map-container">
+            <div id="map">지도를 로딩 중이거나 주소를 찾는 중입니다...</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2nd Row: Specifications Detail Card & Market Stats & KPI Grid -->
+      <div class="specs-and-kpis-container">
+        <!-- Complex Specifications Detail Card -->
+        <section class="card details-section">
+          <div class="card-header">
+            <h3>단지 상세 제원 패널</h3>
+            <span class="subtitle">부동산원 및 K-apt 공식 단지 정보</span>
+          </div>
+          <div class="details-table-wrapper">
+            <table class="details-table">
+              <tbody>
+                <tr>
+                  <th>단지명</th>
+                  <td id="detAptName">-</td>
+                </tr>
+                <tr>
+                  <th>소재지 주소</th>
+                  <td id="detAdres">-</td>
+                </tr>
+                <tr>
+                  <th>총 세대수</th>
+                  <td id="detTotalUnits">-</td>
+                </tr>
+                <tr>
+                  <th>K-apt 단지코드</th>
+                  <td id="detKaptCode">-</td>
+                </tr>
+                <tr>
+                  <th>난방방식</th>
+                  <td id="detHeatType">-</td>
+                </tr>
+                <tr>
+                  <th>복도유형</th>
+                  <td id="detCorridorType">-</td>
+                </tr>
+                <tr>
+                  <th>동수 / 최고층수</th>
+                  <td id="detDongFloor">-</td>
+                </tr>
+                <tr>
+                  <th>준공일자</th>
+                  <td id="detCompetDe">-</td>
+                </tr>
+                <tr>
+                  <th>주차대수</th>
+                  <td><span id="detParkingPerGen">-</span> 대/세대 (총 <span id="detTotalParking">-</span> 대)</td>
+                </tr>
+                <tr>
+                  <th>시공사</th>
+                  <td id="detBuilder">-</td>
+                </tr>
+                <tr>
+                  <th>건폐율 / 용적률</th>
+                  <td id="detBuildingRates">-</td>
+                </tr>
+                <tr>
+                  <th>연락처 (관리실)</th>
+                  <td id="detTel">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Turnover Rate Chart Card -->
+        <section class="card chart-section">
+          <div class="card-header">
+            <div>
+              <h3>평형별 거래회전율 및 거래량 비교</h3>
+              <span class="subtitle" id="chartPeriodSubtitle">공급면적대별 회전율(%)과 거래량(건) 추이</span>
+            </div>
+            <button type="button" id="btnAreaUnitChart" class="area-unit-toggle" aria-pressed="false"
+                    title="공급/전용면적을 ㎡와 평 단위로 전환합니다">평으로 보기</button>
+          </div>
+          <div class="chart-period-filter">
+            <label>분석 기간</label>
+            <div class="date-inputs-row">
+              <input type="text" id="startMonth" placeholder="시작일 선택">
+              <span class="date-sep">~</span>
+              <input type="text" id="endMonth" placeholder="종료일 선택">
+            </div>
+            <button id="btnApplyDate" class="btn-primary-apply">적용</button>
+          </div>
+          <div class="chart-container">
+            <canvas id="turnoverChart"></canvas>
+          </div>
+          <div class="guide-banner">
+            <span class="guide-icon">💡</span>
+            <p class="guide-text">
+              <strong>평가 기준:</strong> 주택산업연구원 및 부동산 통계 기준, 연간 아파트 회전율 <strong>5~10%</strong>를 안정적인 정상 거래 시장으로 분류합니다.
+              배경 띠와 막대 색이 구간을 나타냅니다 &mdash; <strong class="band-low">침체(연 5% 미만)</strong> /
+              <strong class="band-stable">안정(연 5~10%)</strong> / <strong class="band-active">활발(연 10% 이상)</strong>.
+              막대는 조회 기간 동안의 회전율이므로, 기준선은 <strong>연 환산 기준을 해당 기간 길이에 맞춰 환산한 위치</strong>에 표시됩니다.
+              <br><br>
+              🏠 표시는 <strong>임대 추정</strong> 세대입니다.
+              <br>
+              K-apt 공식 세대수엔 없고 건축물대장에만 있어 임대동일 가능성이 높지만, 확정된 정보는 아닙니다.
+            </p>
+          </div>
+        </section>
+
+        <!-- Unit Info KPI Cards -->
+        <section class="kpi-grid">
+          <div class="kpi-card">
+            <span class="kpi-label">단지 총 세대수</span>
+            <h2 class="kpi-value" id="kpiTotalGen">-</h2>
+            <!-- 임대 추정 세대가 있는 단지만 일반/임대 내역을 나눠 보여줍니다 -->
+            <div class="kpi-gen-breakdown" id="kpiGenBreakdown" hidden>
+              <span>일반 <strong id="kpiRegularGen">-</strong></span>
+              <span class="kpi-gen-rental">🏠 임대 추정 <strong id="kpiRentalGen">-</strong></span>
+            </div>
+            <!-- 건축물대장 전유부 실측 조회 진행률 (대단지는 수십 초 걸림) -->
+            <div class="registry-progress" id="registryProgress" hidden>
+              <div class="registry-progress-head">
+                <span id="registryProgressLabel">등기 원본에서 세대수 조회 중…</span>
+                <span class="registry-progress-pct" id="registryProgressPct">0%</span>
+              </div>
+              <div class="registry-progress-track">
+                <div class="registry-progress-fill" id="registryProgressFill"></div>
+              </div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">기간 내 총 거래량</span>
+            <h2 class="kpi-value text-gradient" id="kpiTotalTrades">-</h2>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">단지 평균 회전율</span>
+            <h2 class="kpi-value" id="kpiAvgRate">-</h2>
+          </div>
+        </section>
+      </div>
+
+      <!-- 3rd Row: Chart & Maintenance Cost Section -->
+      <div class="chart-and-maintenance-container">
+        <!-- Market Statistics Trend Card (R-ONE) -->
+        <section class="card rone-stats-section">
+          <div class="card-header">
+            <h3>지역 매매거래 트렌드 (R-ONE)</h3>
+            <span class="subtitle" id="roneStatsSubtitle">선택 지역 아파트 월별 매매거래량 추이</span>
+          </div>
+          <div class="rone-chart-container" style="position: relative; height: 320px; width: 100%;">
+            <canvas id="roneStatsChart"></canvas>
+            <div id="roneStatsError" style="display: none; align-items: center; justify-content: center; text-align: center; color: var(--text-secondary); font-style: italic; font-size: 0.9rem; height: 100%;">
+              한국부동산원 통계 서버 응답 지연 (데이터 부재)
+            </div>
+          </div>
+          <div class="guide-banner">
+            <span class="guide-icon">💡</span>
+            <p class="guide-text">
+              <strong>이 그래프가 보여주는 것:</strong> 가격이 아니라 그 달에 실제로 계약이 체결된 <strong>거래 건수</strong>입니다. 선이 높을수록 매매가 활발했고, 낮을수록 거래가 뜸했다는 뜻입니다. 청록색(해당 구)이 연보라색(서울시 전체)과 비슷하게 움직이면 시장 전반의 분위기를 따라가는 것이고, 서로 다르게 움직이면 그 구만의 특이 동향(개발 호재, 규제 등)일 가능성이 높습니다.
+            </p>
+          </div>
+        </section>
+
+        <section class="card maintenance-section">
+          <div class="card-header">
+            <h3>💰 유지관리 및 에너지 정보</h3>
+            <span class="subtitle" id="maintenancePeriod">조회 월: -</span>
+          </div>
+          <div class="maintenance-controls">
+            <div class="maintenance-control-row">
+              <label for="maintenanceMonth">조회 월</label>
+              <div class="maintenance-action-row">
+                <input type="month" id="maintenanceMonth">
+                <button type="button" id="btnLoadMaintenanceMonth">조회</button>
+              </div>
+            </div>
+            <div class="maintenance-control-row" id="unitTypeRow" style="display: none;">
+              <label>평형 선택</label>
+              <div class="unit-type-switch" id="unitTypeSwitch"></div>
+            </div>
+          </div>
+          <div class="maintenance-content" id="maintenanceContent">
+            <div class="cost-hero">
+              <span class="cost-hero-label" id="costHeroLabel">세대당 월 평균 관리비</span>
+              <h2 class="cost-hero-val" id="costHeroVal">-</h2>
+              <span class="cost-hero-sub" id="costHeroSub">전기·수도·급탕·난방·가스 총합 평균</span>
+              <span class="cost-hero-note" id="costHeroNote"></span>
+            </div>
+            <span class="cost-grid-caption" id="costGridCaption">항목별 세대당 환산액</span>
+            <div class="cost-grid">
+              <div class="cost-card">
+                <span class="cost-label">⚡ 전기료</span>
+                <h3 class="cost-val" id="costElec">-</h3>
+              </div>
+              <div class="cost-card">
+                <span class="cost-label">💧 수도료</span>
+                <h3 class="cost-val" id="costWater">-</h3>
+              </div>
+              <div class="cost-card">
+                <span class="cost-label">♨️ 급탕비</span>
+                <h3 class="cost-val" id="costHotWater">-</h3>
+              </div>
+              <div class="cost-card">
+                <span class="cost-label">🔥 난방비</span>
+                <h3 class="cost-val" id="costHeat">-</h3>
+              </div>
+              <div class="cost-card">
+                <span class="cost-label">🔵 가스료</span>
+                <h3 class="cost-val" id="costGas">-</h3>
+              </div>
+            </div>
+            <div class="maintenance-average-grid">
+              <div class="average-card">
+                <div class="average-card-head">
+                  <span class="average-title">여름철 세대당 평균</span>
+                  <span class="average-meta" id="avgSummerMeta">-</span>
+                </div>
+                <div class="average-lines" id="avgSummerLines">-</div>
+              </div>
+              <div class="average-card">
+                <div class="average-card-head">
+                  <span class="average-title">겨울철 세대당 평균</span>
+                  <span class="average-meta" id="avgWinterMeta">-</span>
+                </div>
+                <div class="average-lines" id="avgWinterLines">-</div>
+              </div>
+            </div>
+          </div>
+          <div id="maintenanceError" class="maintenance-error-msg" style="display: none; padding: 40px 20px; text-align: center; color: var(--text-secondary); font-style: italic;">
+            해당 단지의 상세/관리비 정보가 공시되지 않았습니다.
+          </div>
+        </section>
+      </div>
+
+      <!-- 4th Row: Individual Transaction Price Scatter -->
+      <section class="card scatter-section">
+        <div class="card-header">
+          <div>
+            <h3>실거래가 산점도</h3>
+            <span class="subtitle" id="scatterPeriodSubtitle">계약일(x축)에 따른 개별 거래금액(y축) 분포 · 평형별 색상 구분</span>
+          </div>
+          <div class="scatter-header-controls">
+            <div class="unit-type-switch">
+              <button type="button" class="unit-type-btn scatter-period-btn active" data-years="1">최근 1년</button>
+              <button type="button" class="unit-type-btn scatter-period-btn" data-years="3">최근 3년</button>
+              <button type="button" class="unit-type-btn scatter-period-btn" data-years="5">최근 5년</button>
+              <button type="button" class="unit-type-btn scatter-period-btn" data-years="7">최근 7년</button>
+              <button type="button" class="unit-type-btn scatter-period-btn" data-years="10">최근 10년</button>
+              <button type="button" class="unit-type-btn scatter-period-btn" data-years="all">전체기간</button>
+            </div>
+            <button type="button" id="btnAreaUnitScatter" class="area-unit-toggle" aria-pressed="false"
+                    title="평형 단위를 ㎡와 평 단위로 전환합니다">평으로 보기</button>
+          </div>
+        </div>
+        <div class="scatter-area-picker">
+          <span class="subtitle scatter-area-note">비슷한 평형끼리 묶어서 표시합니다.</span>
+          <span class="subtitle" id="scatterAreaHint">평형을 최대 3개까지 선택해 비교할 수 있습니다.</span>
+          <div class="unit-type-switch" id="scatterAreaChips"></div>
+        </div>
+        <div class="chart-container" style="height: 380px;">
+          <canvas id="priceScatterChart"></canvas>
+        </div>
+      </section>
+
+      <!-- 5th Row: Table Section -->
+      <section class="card table-section">
+        <div class="card-header">
+          <div>
+            <h3>평형별 상세 데이터 그리드</h3>
+            <span class="subtitle">더 정확한 세대수 대비 평형별 회전율 산출 내역</span>
+          </div>
+          <button type="button" id="btnAreaUnit" class="area-unit-toggle" aria-pressed="false"
+                  title="공급/전용면적을 ㎡와 평 단위로 전환합니다">평으로 보기</button>
+        </div>
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th class="sortable" data-sort="exclusive_area">평형 (공급/전용면적)</th>
+                <th class="sortable" data-sort="generation_count">세대수</th>
+                <th class="sortable" data-sort="trade_count">거래량</th>
+                <th class="sortable" data-sort="turnover_rate">거래회전율 (%)</th>
+                <th class="sortable" data-sort="avg_deal_amount">평균 거래가</th>
+                <th>거래 범위 (최저/최고)</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <tr>
+                <td colspan="6" class="empty-row">단지를 선택하면 데이터가 여기에 표시됩니다.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    
+    <footer class="app-footer">
+      <p>© 2026 Real Estate Analytics System. Built for Webview.</p>
+    </footer>
+  </div>
+
+  <!-- Naver Maps Web SDK with Geocoder Submodule
+       주의: 예전 "AI NAVER API" 콘솔은 openapi.map.naver.com + ncpClientId를 썼지만,
+       콘솔이 "Maps"(신규 통합 콘솔, VPC > Maps > Application)로 이전되면서
+       발급 방식이 oapi.map.naver.com + ncpKeyId로 바뀌었습니다(공식 문서 확인).
+       기존 openapi.map.naver.com?ncpClientId=... 형식은 신규 콘솔에서 발급한 키로는
+       인증에 실패합니다. -->
+  <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=3fnzlfh5gb&submodules=geocoder"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+node_modules/
+.DS_Store
+__writetest.txt
+perftest_tmp.mjs
+response_1783409915140.json
+
+# 실제 API 키가 들어있는 로컬/배포 전용 환경변수 파일 (.env.example만 커밋)
+.env
+
+# 로컬 데이터 수집 파이프라인(runPipeline) 전용 원본/중간 캐시 - 배포 서버는
+# SERVE_ONLY=true로 이 파이프라인을 건너뛰므로 필요 없습니다. 용량이 커서
+# (수십~수백 MB) 저장소에는 올리지 않고 로컬에만 둡니다.
+molit_trade_raw_cache.json
+reb_apt_cache.json
+kapt_basic_info.json
+kapt_match_cache.json
+kapt_area_cache.json
+kapt_code_cache.json
+bldrgst_recap_data.json
+bldrgst_title_data.json
+bldrgst_match_cache.json
+subscription_data.json
+20260703_단지_기본정보.xlsx
+서비스 통계목록_오픈API명세서.xls
+통계 세부항목 목록_오픈API명세서.xls
+통계 조회 조건 설정_오픈API명세서.xls
+공공데이터/

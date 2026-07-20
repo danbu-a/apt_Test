@@ -1,0 +1,6677 @@
+{
+  "종로구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 25
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 15
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 22
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 25
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 29
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 18
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 11
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 16
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 14
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 8
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 5
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 14
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 7
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 17
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 31
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 22
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 34
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 32
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 32
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 36
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 46
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 37
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 32
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 20
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 24
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 22
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 37
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 42
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 60
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 55
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 82
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 46
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 38
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 39
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 48
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 27
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 23
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 44
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 68
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 80
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 45
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 88
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 70
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 45
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 53
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 105
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 45
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 40
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 47
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 46
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 63
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 87
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 93
+    }
+  ],
+  "중구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 20
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 13
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 20
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 29
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 39
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 26
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 6
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 8
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 14
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 11
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 15
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 8
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 14
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 32
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 31
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 41
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 62
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 64
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 65
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 63
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 66
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 43
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 61
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 33
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 42
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 47
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 57
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 69
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 84
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 70
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 150
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 104
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 65
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 65
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 54
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 67
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 69
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 96
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 151
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 139
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 104
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 180
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 126
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 56
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 100
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 192
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 69
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 78
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 56
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 74
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 94
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 118
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 139
+    }
+  ],
+  "용산구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 15
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 15
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 23
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 44
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 74
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 34
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 19
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 19
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 19
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 12
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 8
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 21
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 11
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 28
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 30
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 46
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 52
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 60
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 66
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 59
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 64
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 69
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 64
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 39
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 35
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 51
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 60
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 96
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 84
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 134
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 162
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 176
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 87
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 92
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 73
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 78
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 68
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 88
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 247
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 175
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 83
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 115
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 187
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 155
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 132
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 122
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 139
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 101
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 87
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 89
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 96
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 111
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 158
+    }
+  ],
+  "성동구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 28
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 35
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 30
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 47
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 82
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 55
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 28
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 20
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 27
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 21
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 15
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 20
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 31
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 79
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 120
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 109
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 165
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 168
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 189
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 202
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 182
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 133
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 105
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 76
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 110
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 114
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 188
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 253
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 260
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 389
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 463
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 386
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 233
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 150
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 149
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 174
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 161
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 280
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 579
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 459
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 407
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 808
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 423
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 137
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 424
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 612
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 134
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 189
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 944
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 129
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 125
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 175
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 187
+    }
+  ],
+  "광진구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 20
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 16
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 25
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 33
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 52
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 27
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 15
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 15
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 16
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 9
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 10
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 53
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 27
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 45
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 50
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 53
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 66
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 84
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 64
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 66
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 89
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 61
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 48
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 39
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 67
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 68
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 75
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 112
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 88
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 234
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 247
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 174
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 111
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 83
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 80
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 77
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 93
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 104
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 244
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 210
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 186
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 321
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 219
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 70
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 199
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 331
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 122
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 79
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 55
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 97
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 70
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 111
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 182
+    }
+  ],
+  "동대문구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 37
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 51
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 68
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 64
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 103
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 48
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 50
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 40
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 40
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 25
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 37
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 32
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 58
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 105
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 128
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 147
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 151
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 196
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 169
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 146
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 159
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 107
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 112
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 69
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 106
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 109
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 150
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 212
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 238
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 232
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 403
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 305
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 198
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 152
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 201
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 162
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 155
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 211
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 373
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 396
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 432
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 557
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 362
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 183
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 366
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 706
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 179
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 270
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 254
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 289
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 251
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 332
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 376
+    }
+  ],
+  "중랑구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 48
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 40
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 44
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 52
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 179
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 54
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 29
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 26
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 34
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 27
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 21
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 21
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 26
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 61
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 66
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 71
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 99
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 143
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 107
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 75
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 87
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 93
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 75
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 52
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 74
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 68
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 110
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 145
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 148
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 156
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 220
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 204
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 143
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 142
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 93
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 84
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 78
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 116
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 173
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 167
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 156
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 273
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 205
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 314
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 263
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 288
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 111
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 156
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 190
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 182
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 252
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 348
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 348
+    }
+  ],
+  "성북구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 41
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 40
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 45
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 67
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 93
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 396
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 41
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 19
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 41
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 233
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 45
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 53
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 134
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 153
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 157
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 161
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 217
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 179
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 192
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 203
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 192
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 168
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 127
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 130
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 139
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 156
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 177
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 256
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 280
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 297
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 535
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 403
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 263
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 226
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 180
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 146
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 142
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 247
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 389
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 336
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 419
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 569
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 418
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 300
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 419
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 667
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 198
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 329
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 311
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 412
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 396
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 411
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 527
+    }
+  ],
+  "강북구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 18
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 19
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 14
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 20
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 39
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 19
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 17
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 19
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 9
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 20
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 8
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 80
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 21
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 35
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 71
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 51
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 67
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 125
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 71
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 170
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 76
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 40
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 92
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 30
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 50
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 38
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 79
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 57
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 82
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 88
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 144
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 106
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 86
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 77
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 53
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 49
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 52
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 84
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 95
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 106
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 112
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 160
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 120
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 73
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 109
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 135
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 55
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 108
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 106
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 136
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 181
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 151
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 223
+    }
+  ],
+  "도봉구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 26
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 29
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 32
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 67
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 66
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 41
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 32
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 34
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 26
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 29
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 21
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 36
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 38
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 99
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 104
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 87
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 118
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 105
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 105
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 120
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 129
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 90
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 77
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 56
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 87
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 81
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 131
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 136
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 145
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 148
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 204
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 204
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 153
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 123
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 106
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 98
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 68
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 115
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 163
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 176
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 145
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 218
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 244
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 136
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 186
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 215
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 83
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 141
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 170
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 161
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 226
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 360
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 353
+    }
+  ],
+  "노원구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 55
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 64
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 96
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 161
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 147
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 87
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 73
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 41
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 45
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 42
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 43
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 62
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 95
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 176
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 206
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 180
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 264
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 270
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 268
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 320
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 288
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 231
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 207
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 142
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 179
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 202
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 263
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 350
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 330
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 380
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 665
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 589
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 396
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 297
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 306
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 256
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 191
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 314
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 537
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 467
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 499
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 743
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 587
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 331
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 497
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 760
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 229
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 435
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 545
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 633
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 907
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 928
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 893
+    }
+  ],
+  "은평구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 84
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 50
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 61
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 55
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 92
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 61
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 50
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 39
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 42
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 38
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 25
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 45
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 47
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 81
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 357
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 138
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 147
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 142
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 140
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 169
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 149
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 107
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 96
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 65
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 81
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 98
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 154
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 221
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 214
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 325
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 303
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 282
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 181
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 141
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 126
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 162
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 102
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 149
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 242
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 220
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 227
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 359
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 308
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 176
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 249
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 462
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 182
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 217
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 228
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 346
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 323
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 378
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 380
+    }
+  ],
+  "서대문구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 27
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 28
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 42
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 48
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 80
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 49
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 26
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 22
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 19
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 31
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 17
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 21
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 36
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 166
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 114
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 114
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 120
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 150
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 124
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 172
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 172
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 108
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 75
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 56
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 84
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 97
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 110
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 185
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 184
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 248
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 420
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 280
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 181
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 151
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 131
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 206
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 212
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 145
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 317
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 272
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 272
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 519
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 292
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 116
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 259
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 514
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 172
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 232
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 235
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 241
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 268
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 302
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 308
+    }
+  ],
+  "마포구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 69
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 46
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 45
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 69
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 93
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 59
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 38
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 23
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 21
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 22
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 17
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 38
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 100
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 83
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 122
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 122
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 176
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 181
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 183
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 188
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 163
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 106
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 84
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 68
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 101
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 113
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 157
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 263
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 260
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 306
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 466
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 376
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 203
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 168
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 159
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 130
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 146
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 227
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 550
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 423
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 402
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 661
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 359
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 139
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 333
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 673
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 133
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 124
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 173
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 161
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 170
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 193
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 246
+    }
+  ],
+  "양천구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 51
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 32
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 31
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 61
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 86
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 51
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 31
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 26
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 31
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 16
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 24
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 30
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 35
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 105
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 122
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 144
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 147
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 165
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 161
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 198
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 188
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 132
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 129
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 89
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 100
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 136
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 157
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 154
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 213
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 234
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 395
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 406
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 270
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 182
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 157
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 165
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 103
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 173
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 425
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 371
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 339
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 556
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 335
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 94
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 293
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 548
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 164
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 244
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 232
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 248
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 224
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 269
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 279
+    }
+  ],
+  "강서구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 95
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 54
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 69
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 80
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 100
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 68
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 52
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 34
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 41
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 27
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 43
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 39
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 55
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 106
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 164
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 168
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 171
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 222
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 170
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 209
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 184
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 156
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 138
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 105
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 126
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 154
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 151
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 248
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 272
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 288
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 431
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 394
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 249
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 195
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 170
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 160
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 168
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 219
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 389
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 384
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 445
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 580
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 445
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 220
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 419
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 797
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 198
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 253
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 377
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 298
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 490
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 551
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 566
+    }
+  ],
+  "구로구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 146
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 64
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 69
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 94
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 120
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 77
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 61
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 38
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 44
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 39
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 37
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 30
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 41
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 71
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 123
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 140
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 160
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 151
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 149
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 152
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 151
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 145
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 105
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 85
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 121
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 125
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 171
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 233
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 229
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 217
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 307
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 283
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 168
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 181
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 151
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 116
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 134
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 168
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 346
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 284
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 482
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 628
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 324
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 179
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 293
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 441
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 151
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 290
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 270
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 310
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 395
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 462
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 616
+    }
+  ],
+  "금천구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 19
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 18
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 27
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 42
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 52
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 29
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 25
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 24
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 18
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 12
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 145
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 16
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 13
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 22
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 60
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 41
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 53
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 63
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 62
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 62
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 57
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 50
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 42
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 31
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 44
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 50
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 56
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 60
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 67
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 63
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 123
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 90
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 73
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 47
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 42
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 52
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 36
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 64
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 84
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 71
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 67
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 121
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 89
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 61
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 77
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 114
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 52
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 73
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 94
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 111
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 106
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 163
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 150
+    }
+  ],
+  "영등포구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 51
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 44
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 61
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 74
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 108
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 52
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 48
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 44
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 42
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 84
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 32
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 80
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 37
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 98
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 182
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 192
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 189
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 197
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 293
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 184
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 194
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 152
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 119
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 72
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 122
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 125
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 167
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 271
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 322
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 299
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 484
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 438
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 257
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 237
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 179
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 191
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 166
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 255
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 536
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 419
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 458
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 634
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 499
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 209
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 374
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 601
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 195
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 199
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 282
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 291
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 330
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 294
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 400
+    }
+  ],
+  "동작구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 40
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 39
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 44
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 59
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 89
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 192
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 21
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 19
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 34
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 22
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 17
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 20
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 31
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 59
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 114
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 109
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 128
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 132
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 147
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 156
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 155
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 104
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 86
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 63
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 131
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 127
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 139
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 222
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 205
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 243
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 469
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 325
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 191
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 167
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 153
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 152
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 164
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 212
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 517
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 451
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 418
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 623
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 365
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 156
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 331
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 606
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 157
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 134
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 148
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 203
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 210
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 248
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 330
+    }
+  ],
+  "관악구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 46
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 46
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 54
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 54
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 82
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 60
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 31
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 20
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 21
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 21
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 14
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 13
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 22
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 39
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 77
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 88
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 95
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 288
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 99
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 121
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 116
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 93
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 62
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 55
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 70
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 78
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 113
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 140
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 123
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 175
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 260
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 176
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 118
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 127
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 92
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 89
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 75
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 142
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 223
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 207
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 217
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 303
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 202
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 118
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 256
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 350
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 118
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 177
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 165
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 232
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 212
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 275
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 376
+    }
+  ],
+  "서초구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 72
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 50
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 111
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 116
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 177
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 274
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 63
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 49
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 37
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 32
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 43
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 45
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 31
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 83
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 136
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 131
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 178
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 175
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 195
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 198
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 199
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 137
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 109
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 72
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 85
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 100
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 153
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 241
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 266
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 359
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 555
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 378
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 219
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 244
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 292
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 203
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 257
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 252
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 470
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 439
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 399
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 178
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 342
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 222
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 124
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 154
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 262
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 186
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 177
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 135
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 173
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 171
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 387
+    }
+  ],
+  "강남구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 136
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 484
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 97
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 120
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 168
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 131
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 179
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 239
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 151
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 50
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 37
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 94
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 70
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 128
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 205
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 186
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 260
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 293
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 270
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 291
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 236
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 251
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 134
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 119
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 151
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 182
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 192
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 269
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 346
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 328
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 610
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 532
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 373
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 285
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 289
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 256
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 197
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 331
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 906
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 502
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 246
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 389
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 604
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 193
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 215
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 260
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 379
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 262
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 194
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 200
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 192
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 318
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 484
+    }
+  ],
+  "송파구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 57
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 62
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 60
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 79
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 116
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 57
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 53
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 34
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 45
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 40
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 46
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 78
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 98
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 233
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 265
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 242
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 338
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 295
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 291
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 277
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 290
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 208
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 135
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 135
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 184
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 170
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 246
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 352
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 403
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 441
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 705
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 588
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 415
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 251
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 289
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 285
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 224
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 389
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 724
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 837
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 271
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 367
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 849
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 232
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 257
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 501
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 647
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 370
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 324
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 320
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 339
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 443
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 627
+    }
+  ],
+  "강동구": [
+    {
+      "month": "202201",
+      "month_label": "2022년 1월",
+      "value": 55
+    },
+    {
+      "month": "202202",
+      "month_label": "2022년 2월",
+      "value": 50
+    },
+    {
+      "month": "202203",
+      "month_label": "2022년 3월",
+      "value": 46
+    },
+    {
+      "month": "202204",
+      "month_label": "2022년 4월",
+      "value": 64
+    },
+    {
+      "month": "202205",
+      "month_label": "2022년 5월",
+      "value": 106
+    },
+    {
+      "month": "202206",
+      "month_label": "2022년 6월",
+      "value": 49
+    },
+    {
+      "month": "202207",
+      "month_label": "2022년 7월",
+      "value": 29
+    },
+    {
+      "month": "202208",
+      "month_label": "2022년 8월",
+      "value": 39
+    },
+    {
+      "month": "202209",
+      "month_label": "2022년 9월",
+      "value": 25
+    },
+    {
+      "month": "202210",
+      "month_label": "2022년 10월",
+      "value": 29
+    },
+    {
+      "month": "202211",
+      "month_label": "2022년 11월",
+      "value": 36
+    },
+    {
+      "month": "202212",
+      "month_label": "2022년 12월",
+      "value": 52
+    },
+    {
+      "month": "202301",
+      "month_label": "2023년 1월",
+      "value": 83
+    },
+    {
+      "month": "202302",
+      "month_label": "2023년 2월",
+      "value": 182
+    },
+    {
+      "month": "202303",
+      "month_label": "2023년 3월",
+      "value": 199
+    },
+    {
+      "month": "202304",
+      "month_label": "2023년 4월",
+      "value": 198
+    },
+    {
+      "month": "202305",
+      "month_label": "2023년 5월",
+      "value": 254
+    },
+    {
+      "month": "202306",
+      "month_label": "2023년 6월",
+      "value": 256
+    },
+    {
+      "month": "202307",
+      "month_label": "2023년 7월",
+      "value": 192
+    },
+    {
+      "month": "202308",
+      "month_label": "2023년 8월",
+      "value": 254
+    },
+    {
+      "month": "202309",
+      "month_label": "2023년 9월",
+      "value": 213
+    },
+    {
+      "month": "202310",
+      "month_label": "2023년 10월",
+      "value": 162
+    },
+    {
+      "month": "202311",
+      "month_label": "2023년 11월",
+      "value": 103
+    },
+    {
+      "month": "202312",
+      "month_label": "2023년 12월",
+      "value": 89
+    },
+    {
+      "month": "202401",
+      "month_label": "2024년 1월",
+      "value": 143
+    },
+    {
+      "month": "202402",
+      "month_label": "2024년 2월",
+      "value": 154
+    },
+    {
+      "month": "202403",
+      "month_label": "2024년 3월",
+      "value": 189
+    },
+    {
+      "month": "202404",
+      "month_label": "2024년 4월",
+      "value": 253
+    },
+    {
+      "month": "202405",
+      "month_label": "2024년 5월",
+      "value": 279
+    },
+    {
+      "month": "202406",
+      "month_label": "2024년 6월",
+      "value": 441
+    },
+    {
+      "month": "202407",
+      "month_label": "2024년 7월",
+      "value": 715
+    },
+    {
+      "month": "202408",
+      "month_label": "2024년 8월",
+      "value": 364
+    },
+    {
+      "month": "202409",
+      "month_label": "2024년 9월",
+      "value": 280
+    },
+    {
+      "month": "202410",
+      "month_label": "2024년 10월",
+      "value": 178
+    },
+    {
+      "month": "202411",
+      "month_label": "2024년 11월",
+      "value": 200
+    },
+    {
+      "month": "202412",
+      "month_label": "2024년 12월",
+      "value": 271
+    },
+    {
+      "month": "202501",
+      "month_label": "2025년 1월",
+      "value": 149
+    },
+    {
+      "month": "202502",
+      "month_label": "2025년 2월",
+      "value": 318
+    },
+    {
+      "month": "202503",
+      "month_label": "2025년 3월",
+      "value": 601
+    },
+    {
+      "month": "202504",
+      "month_label": "2025년 4월",
+      "value": 438
+    },
+    {
+      "month": "202505",
+      "month_label": "2025년 5월",
+      "value": 390
+    },
+    {
+      "month": "202506",
+      "month_label": "2025년 6월",
+      "value": 864
+    },
+    {
+      "month": "202507",
+      "month_label": "2025년 7월",
+      "value": 511
+    },
+    {
+      "month": "202508",
+      "month_label": "2025년 8월",
+      "value": 239
+    },
+    {
+      "month": "202509",
+      "month_label": "2025년 9월",
+      "value": 568
+    },
+    {
+      "month": "202510",
+      "month_label": "2025년 10월",
+      "value": 887
+    },
+    {
+      "month": "202511",
+      "month_label": "2025년 11월",
+      "value": 221
+    },
+    {
+      "month": "202512",
+      "month_label": "2025년 12월",
+      "value": 184
+    },
+    {
+      "month": "202601",
+      "month_label": "2026년 1월",
+      "value": 281
+    },
+    {
+      "month": "202602",
+      "month_label": "2026년 2월",
+      "value": 255
+    },
+    {
+      "month": "202603",
+      "month_label": "2026년 3월",
+      "value": 340
+    },
+    {
+      "month": "202604",
+      "month_label": "2026년 4월",
+      "value": 322
+    },
+    {
+      "month": "202605",
+      "month_label": "2026년 5월",
+      "value": 318
+    }
+  ]
+}
