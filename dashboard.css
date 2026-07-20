@@ -536,6 +536,16 @@ select:focus {
   color: var(--text-muted);
 }
 
+.app-footer a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.app-footer a:hover {
+  color: #fff;
+}
+
 .app-footer p + p {
   margin-top: 4px;
 }
