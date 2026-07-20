@@ -1194,11 +1194,11 @@ function renderROneStatsChart(guName) {
   });
 }
 
-// 회전율 구간 (연 환산 기준). 표의 상태 배지(침체/안정/활발)와 같은 색을 씁니다.
+// 팔림지수 구간 (연 환산 회전율 기준). 표의 상태 배지(조금 힘들어요/무난해요/잘 팔려요)와 같은 색을 씁니다.
 const TURNOVER_BANDS = [
-  { key: "low", label: "침체", annualFrom: 0, annualTo: 5, rgb: "59, 130, 246" },
-  { key: "stable", label: "안정", annualFrom: 5, annualTo: 10, rgb: "16, 185, 129" },
-  { key: "active", label: "활발", annualFrom: 10, annualTo: Infinity, rgb: "239, 68, 68" }
+  { key: "low", label: "조금 힘들어요", annualFrom: 0, annualTo: 5, rgb: "59, 130, 246" },
+  { key: "stable", label: "무난해요", annualFrom: 5, annualTo: 10, rgb: "16, 185, 129" },
+  { key: "active", label: "잘 팔려요", annualFrom: 10, annualTo: Infinity, rgb: "239, 68, 68" }
 ];
 
 function getTurnoverBand(annualRate) {
@@ -1243,7 +1243,7 @@ const turnoverBandsPlugin = {
         ctx.fillText(band.tickLabel, area.right - 6, top - 2);
       }
 
-      // 띠 이름(침체/안정/활발)은 띠가 충분히 두꺼울 때만 왼쪽에 흐리게 표시합니다.
+      // 띠 이름(조금 힘들어요/무난해요/잘 팔려요)은 띠가 충분히 두꺼울 때만 왼쪽에 흐리게 표시합니다.
       if (bottom - top > 26) {
         ctx.fillStyle = `rgba(${band.rgb}, 0.5)`;
         ctx.font = "700 10px Outfit, sans-serif";
@@ -1362,15 +1362,15 @@ function renderChart(aptData) {
         x: {
           grid: { color: "rgba(255, 255, 255, 0.05)" },
           ticks: {
-            // 평형 라벨 자체도 그 평형이 속한 회전율 구간 색으로 물들입니다(막대 색과 동일
-            // 기준). "안정"/"활발" 구간은 굵게 강조해 정상 거래가 되는 평형이 한눈에
-            // 띄도록 하고, "침체"는 색만 다르고 굵기는 기본값으로 둡니다.
+            // 평형 라벨 자체도 그 평형이 속한 팔림지수 구간 색으로 물들입니다(막대 색과 동일
+            // 기준). "무난해요"/"잘 팔려요" 구간은 굵게 강조해 정상 거래가 되는 평형이 한눈에
+            // 띄도록 하고, "조금 힘들어요"는 색만 다르고 굵기는 기본값으로 둡니다.
             color: (ctx) => `rgb(${barColors[ctx.index] || "156, 163, 175"})`,
             font: (ctx) => {
               const bandLabel = getTurnoverBand(sortedData[ctx.index]?.annualized_rate ?? 0).label;
               return {
                 family: "Outfit, sans-serif",
-                weight: bandLabel === "침체" ? "500" : "800",
+                weight: bandLabel === "조금 힘들어요" ? "500" : "800",
                 size: 11
               };
             }
@@ -1777,28 +1777,36 @@ function renderTableData(aptData) {
   aptData.sort((a, b) => {
     let valA = a[currentSort.key];
     let valB = b[currentSort.key];
-    
+
     if (typeof valA === "string") {
       return valA.localeCompare(valB, "ko") * currentSort.direction;
     }
     return (valA - valB) * currentSort.direction;
   });
 
+  // 이 단지 안에서 거래량이 가장 많은 평형에 "가장 잘 팔려요!" 배지를 붙입니다.
+  // 거래가 전부 0건이면(신축 등) 의미가 없으므로 붙이지 않습니다.
+  const maxTradeCount = Math.max(...aptData.map(item => item.trade_count));
+
   tableBody.innerHTML = aptData
     .map(item => {
-      const rangeStr = item.trade_count > 0 
+      const rangeStr = item.trade_count > 0
         ? `${formatKrw(item.min_deal_amount)} ~ ${formatKrw(item.max_deal_amount)}`
         : "-";
-        
+
       const annRate = item.annualized_rate;
       let statusBadge = "";
       if (annRate < 5) {
-        statusBadge = `<span class="status-badge status-low">❄️ 침체</span>`;
+        statusBadge = `<span class="status-badge status-low">🐌 조금 힘들어요</span>`;
       } else if (annRate < 10) {
-        statusBadge = `<span class="status-badge status-stable">👍 안정</span>`;
+        statusBadge = `<span class="status-badge status-stable">👌 무난해요</span>`;
       } else {
-        statusBadge = `<span class="status-badge status-active">🔥 활발</span>`;
+        statusBadge = `<span class="status-badge status-active">🔥 잘 팔려요</span>`;
       }
+
+      const bestSellerBadgeHtml = maxTradeCount > 0 && item.trade_count === maxTradeCount
+        ? `<span class="best-seller-badge" title="이 단지에서 조회 기간 동안 거래량이 가장 많았던 평형입니다">🏆 가장 잘 팔려요!</span>`
+        : "";
 
       const typeLabelHtml = item.unit_type
         ? `<span class="unit-type-badge" title="청약홈 분양정보 기준 주택형">${item.unit_type}타입</span>`
@@ -1824,7 +1832,7 @@ function renderTableData(aptData) {
 
       return `
         <tr>
-          <td class="font-outfit font-medium">${formatAreaPair(item.supply_area, item.exclusive_area)} ${typeLabelHtml} ${rentalBadgeHtml}</td>
+          <td class="font-outfit font-medium">${formatAreaPair(item.supply_area, item.exclusive_area)} ${typeLabelHtml} ${rentalBadgeHtml} ${bestSellerBadgeHtml}</td>
           <td>${item.generation_count.toLocaleString()} 세대 ${unitsBadgeHtml}</td>
           <td><span class="badge badge-cyan">${item.trade_count} 건</span></td>
           <td>

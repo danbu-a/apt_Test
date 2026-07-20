@@ -130,6 +130,12 @@ body {
   letter-spacing: -0.02em;
 }
 
+.app-slogan {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
 .date-badge {
   display: flex;
   align-items: center;
@@ -530,6 +536,10 @@ select:focus {
   color: var(--text-muted);
 }
 
+.app-footer p + p {
+  margin-top: 4px;
+}
+
 /* Guide Banner for Academic Reference */
 .guide-banner {
   display: flex;
@@ -608,6 +618,22 @@ select:focus {
   background-color: rgba(168, 85, 247, 0.12);
   color: #c084fc;
   border: 1px solid rgba(168, 85, 247, 0.25);
+}
+
+/* 단지 내 거래량 1위 평형 배지 - 팔림지수 배지와 구분되는 금색으로 눈에 띄게 표시 */
+.best-seller-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 6px;
+  margin-left: 4px;
+  vertical-align: middle;
+  background-color: rgba(250, 204, 21, 0.14);
+  color: #facc15;
+  border: 1px solid rgba(250, 204, 21, 0.35);
 }
 
 /* 세대수 확인/추정 여부 배지 */
