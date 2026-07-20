@@ -830,7 +830,12 @@ function getPreferredPort() {
 
 function getRequestOrigin(req, actualPort) {
   const host = req.headers.host || `localhost:${actualPort}`;
-  return `http://${host}`;
+  // Render 등 PaaS는 HTTPS를 프록시에서 종료하고 내부적으로는 평문 HTTP로 넘기므로,
+  // req 자체만 보면 항상 http로 보입니다. 프록시가 표준으로 붙여주는 X-Forwarded-Proto로
+  // 실제 브라우저가 접속한 프로토콜을 판단합니다(없으면 로컬 개발 환경이므로 http).
+  const forwardedProto = req.headers["x-forwarded-proto"];
+  const protocol = forwardedProto ? forwardedProto.split(",")[0].trim() : "http";
+  return `${protocol}://${host}`;
 }
 
 async function proxyPublicApi(targetUrl, res) {
