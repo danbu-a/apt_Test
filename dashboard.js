@@ -241,64 +241,37 @@ function initMap() {
   }
 }
 
-// 수집된 실거래 데이터 내 날짜 분포를 분석하여 Flatpickr 설정
+// 분석 기간 슬라이더(1~5년전)가 "현재 시점"으로 삼는 기준 - 수집된 실거래 데이터 중
+// 가장 최근 연/월입니다. initDatePickerRange()에서 한 번 계산해 getParsedMonths()가
+// 재사용합니다.
+let datasetLatestYear = 2026;
+let datasetLatestMonth = 7;
+
+const PERIOD_SLIDER_STORAGE_KEY = "periodSliderYears_v1";
+
+// 수집된 실거래 데이터 내 날짜 분포를 분석해 "현재 시점"(가장 최근 거래월)을 구하고,
+// 분석 기간 슬라이더의 저장된 값(또는 기본값 1년)을 반영합니다.
 function initDatePickerRange() {
-  let minTime = Infinity;
   let maxTime = -Infinity;
-  let minStr = "2020-01-01";
-  let maxStr = "2026-07-01";
-  
+
   rawData.forEach(item => {
     if (item.deals && item.deals.length > 0) {
       item.deals.forEach(d => {
         const timeVal = d.year * 100 + d.month;
-        if (timeVal < minTime) {
-          minTime = timeVal;
-          minStr = `${d.year}-${String(d.month).padStart(2, "0")}-01`;
-        }
-        if (timeVal > maxTime) {
-          maxTime = timeVal;
-          maxStr = `${d.year}-${String(d.month).padStart(2, "0")}-01`;
-        }
+        if (timeVal > maxTime) maxTime = timeVal;
       });
     }
   });
 
-  // 기본 조회 기간: 데이터가 있는 가장 최근 월부터 1년 전까지(그 달 포함 12개월)
-  const maxYear = Math.floor(maxTime / 100);
-  const maxMonth = maxTime % 100;
+  if (maxTime === -Infinity) maxTime = datasetLatestYear * 100 + datasetLatestMonth;
+  datasetLatestYear = Math.floor(maxTime / 100);
+  datasetLatestMonth = maxTime % 100;
 
-  let startYear = maxYear;
-  let startMonth = maxMonth - 11;
-  if (startMonth <= 0) {
-    startYear -= 1;
-    startMonth += 12;
-  }
+  const slider = document.getElementById("periodSlider");
+  if (!slider) return;
 
-  const defaultStart = `${startYear}-${String(startMonth).padStart(2, "0")}-01`;
-  const defaultEnd = `${maxYear}-${String(maxMonth).padStart(2, "0")}-01`;
-
-  // localStorage 캐싱 확인. 키에 버전을 붙여, 예전 기본값(최근 6개월)이 저장돼 있던
-  // 브라우저에서도 새 기본값(최근 12개월)이 한 번은 적용되게 합니다.
-  const savedStart = localStorage.getItem("startMonth_v2");
-  const savedEnd = localStorage.getItem("endMonth_v2");
-
-  // Flatpickr 달력 초기화 및 바인딩
-  flatpickr("#startMonth", {
-    locale: "ko",
-    dateFormat: "Y년 m월 d일",
-    defaultDate: savedStart || defaultStart,
-    minDate: minStr,
-    maxDate: maxStr
-  });
-
-  flatpickr("#endMonth", {
-    locale: "ko",
-    dateFormat: "Y년 m월 d일",
-    defaultDate: savedEnd || defaultEnd,
-    minDate: minStr,
-    maxDate: maxStr
-  });
+  const saved = parseInt(localStorage.getItem(PERIOD_SLIDER_STORAGE_KEY), 10);
+  slider.value = saved >= 1 && saved <= 5 ? saved : 1;
 }
 
 function initDashboard() {
@@ -306,8 +279,6 @@ function initDashboard() {
   const dongSelect = document.getElementById("dongSelect");
   const aptSelect = document.getElementById("aptSelect");
   const aptSearch = document.getElementById("aptSearch");
-  const startMonthInput = document.getElementById("startMonth");
-  const endMonthInput = document.getElementById("endMonth");
 
   // 1. 고유 구 목록 추출
   const uniqueGus = Array.from(new Set(rawData.map(item => item.gu_name).filter(Boolean))).sort();
@@ -420,17 +391,12 @@ function initDashboard() {
     renderAptDashboard(selectedApt);
   });
 
-  // [설정] 버튼 클릭 시에만 수동으로 대시보드 렌더링 갱신 및 localStorage 보존
-  const btnApplyDate = document.getElementById("btnApplyDate");
-  if (btnApplyDate) {
-    btnApplyDate.addEventListener("click", () => {
-      const startVal = startMonthInput.value;
-      const endVal = endMonthInput.value;
-      
-      if (startVal && endVal) {
-        localStorage.setItem("startMonth_v2", startVal);
-        localStorage.setItem("endMonth_v2", endVal);
-      }
+  // 분석 기간 슬라이더 - 드래그하는 즉시(놓을 때까지 기다리지 않고) 반영합니다.
+  // step=1인 5단 슬라이더라 값이 바뀔 때만 input 이벤트가 발생해 과도한 재렌더링 걱정은 없습니다.
+  const periodSlider = document.getElementById("periodSlider");
+  if (periodSlider) {
+    periodSlider.addEventListener("input", () => {
+      localStorage.setItem(PERIOD_SLIDER_STORAGE_KEY, periodSlider.value);
       renderAptDashboard(selectedApt);
     });
   }
@@ -481,39 +447,26 @@ function initDashboard() {
   });
 }
 
-// Flatpickr 한국어 포맷("2026년 07월 01일") 또는 "2026-07" 포맷에서 연/월 정수를 추출하는 헬퍼 함수
-function parseFlatpickrDateToYearMonth(val) {
-  if (!val) return { y: 2026, m: 7, val: 202607 };
-  
-  const matches = val.match(/\d+/g);
-  if (matches && matches.length >= 2) {
-    const y = parseInt(matches[0], 10);
-    const m = parseInt(matches[1], 10);
-    return { y, m, val: y * 100 + m };
-  }
-  
-  if (val.includes("-")) {
-    const parts = val.split("-").map(Number);
-    return { y: parts[0], m: parts[1], val: parts[0] * 100 + parts[1] };
-  }
-  
-  return { y: 2026, m: 7, val: 202607 };
-}
-
-// 시작월과 종료월 기간 숫자로 파싱 및 개월 수(N) 연산
+// 분석 기간 슬라이더 값(1~5, "현재로부터 N년 전까지")을 실제 연/월 범위로 변환합니다.
+// 종료월은 항상 데이터상 가장 최근 거래월(datasetLatestYear/Month)로 고정되고,
+// 시작월은 그 달을 포함해 정확히 N*12개월 전입니다(예: 1년 -> 이번 달 포함 12개월).
 function getParsedMonths() {
-  const startMonthStr = document.getElementById("startMonth").value;
-  const endMonthStr = document.getElementById("endMonth").value;
-  
-  const start = parseFlatpickrDateToYearMonth(startMonthStr);
-  const end = parseFlatpickrDateToYearMonth(endMonthStr);
-  
-  const monthsCount = (end.y - start.y) * 12 + (end.m - start.m) + 1;
-  
+  const slider = document.getElementById("periodSlider");
+  const years = slider ? (parseInt(slider.value, 10) || 1) : 1;
+
+  const endVal = datasetLatestYear * 100 + datasetLatestMonth;
+
+  let startYear = datasetLatestYear;
+  let startMonth = datasetLatestMonth - (years * 12 - 1);
+  while (startMonth <= 0) {
+    startMonth += 12;
+    startYear -= 1;
+  }
+
   return {
-    startVal: start.val,
-    endVal: end.val,
-    monthsCount: monthsCount > 0 ? monthsCount : 1
+    startVal: startYear * 100 + startMonth,
+    endVal,
+    monthsCount: years * 12
   };
 }
 
