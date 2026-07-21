@@ -1819,7 +1819,7 @@ function buildUnitsBadgeHtml(aptKey, unitsMode) {
 // 평형별 상세 데이터 그리드 한 행(그룹 헤더 또는 하위 평형)을 그립니다.
 function buildAreaRowHtml(item, opts = {}) {
   const {
-    maxTradeCount = 0,
+    maxTurnoverRate = -1,
     rowClass = "",
     areaLabelPrefix = "",
     areaLabel,
@@ -1832,18 +1832,23 @@ function buildAreaRowHtml(item, opts = {}) {
 
   const statusBadge = buildStatusBadgeHtml(item.annualized_rate);
 
-  // 베스트셀러 배지는 호출부가 넘긴 maxTradeCount 기준으로만 판단합니다 - 그룹 헤더를
-  // 그릴 때는 그룹(합산) 거래량 중 최댓값을, 하위 평형을 그릴 때는 0을 넘겨(호출부 참고)
-  // 그룹 안의 개별 평형에는 절대 붙지 않도록 합니다.
-  const bestSellerBadgeHtml = maxTradeCount > 0 && item.trade_count === maxTradeCount
-    ? `<span class="best-seller-badge" title="이 단지에서 조회 기간 동안 거래량이 가장 많았던 평형입니다">🏆 가장 잘 팔려요!</span>`
+  const unitsMode = item.unitsMode ?? getUnitsMode(item);
+
+  // 베스트셀러 배지는 호출부가 넘긴 maxTurnoverRate(회전율 기준) 최댓값으로만 판단합니다 -
+  // 그룹 헤더를 그릴 때는 그룹 안 최댓값을, 하위 평형을 그릴 때는 -1을 넘겨(호출부 참고)
+  // 그룹 안의 개별 평형에는 절대 붙지 않도록 합니다. 세대수가 추정치(등기/청약홈으로
+  // 확정되지 않은 estimated/mixed)인 평형은 회전율 분모 자체가 부정확할 수 있어
+  // 후보에서 제외합니다 - 애초에 maxTurnoverRate 계산에서도 빠져 있습니다(renderTableData).
+  const bestSellerBadgeHtml = maxTurnoverRate >= 0
+    && item.turnover_rate === maxTurnoverRate
+    && unitsMode !== "estimated" && unitsMode !== "mixed"
+    ? `<span class="best-seller-badge" title="이 단지에서 조회 기간 동안 회전율(팔림지수)이 가장 높았던 평형입니다">🏆 가장 잘 팔려요!</span>`
     : "";
 
   const typeLabelHtml = item.unit_type
     ? `<span class="unit-type-badge" title="청약홈 분양정보 기준 주택형">${item.unit_type}타입</span>`
     : "";
 
-  const unitsMode = item.unitsMode ?? getUnitsMode(item);
   const unitsBadgeHtml = buildUnitsBadgeHtml(item.apt_key, unitsMode);
 
   // 임대 추정 배지: K-apt(HOA 관리) 공식 총세대수로는 설명이 안 되고 건축물대장
@@ -1857,13 +1862,21 @@ function buildAreaRowHtml(item, opts = {}) {
   const toggleArrowHtml = showToggleArrow ? `<span class="group-toggle-arrow">▸</span>` : "";
   const resolvedAreaLabel = areaLabel ?? formatAreaPair(item.supply_area, item.exclusive_area);
 
+  // 등기/청약홈으로 확정되지 않은(estimated 또는 mixed) 회전율은 세대수 분모가 균등
+  // 안분 추정치라, 소수점 4자리까지 그대로 보여주면 실측만큼 정밀한 값처럼 보이는
+  // 착시를 줍니다. 1자리 + "(추정)" 라벨로 낮춰 보여줍니다.
+  const isEstimatedRate = unitsMode === "estimated" || unitsMode === "mixed";
+  const turnoverRateHtml = isEstimatedRate
+    ? `${item.turnover_rate.toFixed(1)}% (추정)`
+    : `${item.turnover_rate.toFixed(4)} %`;
+
   return `
     <tr class="${rowClass}">
       <td class="font-outfit font-medium">${toggleArrowHtml}${areaLabelPrefix}${resolvedAreaLabel} ${typeLabelHtml} ${rentalBadgeHtml} ${bestSellerBadgeHtml}</td>
       <td>${item.generation_count.toLocaleString()} 세대 ${unitsBadgeHtml}</td>
       <td><span class="badge badge-cyan">${item.trade_count} 건</span></td>
       <td>
-        <span class="badge badge-purple">${item.turnover_rate.toFixed(4)} %</span>
+        <span class="badge badge-purple">${turnoverRateHtml}</span>
         ${statusBadge}
         <span style="font-size: 0.75rem; color: rgba(229, 231, 235, 0.5); display: block; margin-top: 4px;">
           (연 환산: ${item.annualized_rate.toFixed(2)}%)
@@ -1897,14 +1910,22 @@ function renderTableData(aptData) {
     return (valA - valB) * currentSort.direction;
   });
 
-  // 이 단지 안에서 거래량이 가장 많은 그룹(평형)에 "가장 잘 팔려요!" 배지를 붙입니다.
-  // 거래가 전부 0건이면(신축 등) 의미가 없으므로 붙이지 않습니다.
-  const maxTradeCount = Math.max(...groups.map(g => g.trade_count));
+  // 이 단지 안에서 회전율(팔림지수)이 가장 높은 그룹(평형)에 "가장 잘 팔려요!" 배지를
+  // 붙입니다. 세대수가 추정치(등기/청약홈으로 확정되지 않은 estimated/mixed)인 그룹은
+  // 회전율 분모 자체가 부정확할 수 있어 애초에 후보에서 제외합니다 - 확정 데이터가
+  // 하나도 없으면(현재 대부분의 단지가 그렇습니다) 배지가 아예 붙지 않습니다.
+  const confirmedGroups = groups.filter(g => {
+    const mode = g.unitsMode ?? getUnitsMode(g);
+    return mode !== "estimated" && mode !== "mixed";
+  });
+  const maxTurnoverRate = confirmedGroups.length > 0
+    ? Math.max(...confirmedGroups.map(g => g.turnover_rate))
+    : -1;
 
   tableBody.innerHTML = groups
     .map(group => {
       const headerHtml = buildAreaRowHtml(group, {
-        maxTradeCount,
+        maxTurnoverRate,
         rowClass: group.isGroup ? "grid-group-row" : "",
         showToggleArrow: group.isGroup,
         areaLabel: group.isGroup ? formatTableGroupAreaLabel(group) : undefined
