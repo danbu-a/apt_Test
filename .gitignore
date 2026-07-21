@@ -6,6 +6,25 @@ response_1783409915140.json
 
 # 실제 API 키가 들어있는 로컬/배포 전용 환경변수 파일 (.env.example만 커밋)
 .env
+.env.*
+!.env.example
+
+# 인증서/키/자격증명 파일
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+id_rsa
+id_rsa.pub
+*.keystore
+*.jks
+credentials.json
+secrets.json
+serviceAccount*.json
+google-services.json
+.npmrc
 
 # 로컬 데이터 수집 파이프라인(runPipeline) 전용 원본/중간 캐시 - 배포 서버는
 # SERVE_ONLY=true로 이 파이프라인을 건너뛰므로 필요 없습니다. 용량이 커서

@@ -515,7 +515,7 @@ export class BldRgstClient {
  */
 export class ROneStatsClient {
   constructor() {
-    this.serviceKey = "d0fd3e4ebf09453d8fa449382273dedb";
+    this.serviceKey = config.REB_STATS_API_KEY;
     this.baseUrl = "https://www.reb.or.kr/r-one/openapi/";
   }
 

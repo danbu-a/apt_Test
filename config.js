@@ -30,6 +30,11 @@ export const MOLIT_API_KEY = DATA_GO_KR_SERVICE_KEY;
 export const REB_API_KEY = DATA_GO_KR_SERVICE_KEY;
 export const KAPT_API_KEY = DATA_GO_KR_SERVICE_KEY;
 
+// 한국부동산원(R-ONE) 부동산 통계 정보 오픈 API 인증키 - 위 DATA_GO_KR_SERVICE_KEY와는
+// 별도로 발급받는 키라 R-ONE 사이트(https://www.reb.or.kr/r-one/)에서 따로 발급받아
+// .env에 REB_STATS_API_KEY=발급받은키 형식으로 넣어두면 됩니다(.env.example 참고).
+export const REB_STATS_API_KEY = process.env.REB_STATS_API_KEY || "";
+
 // 1. 국토교통부 아파트매매 실거래 상세 자료 조회 API 설정
 export const MOLIT_TRADE_URL = "https://apis.data.go.kr/1613000/RTMSDataSvcAptTradeDev/getRTMSDataSvcAptTradeDev";
 

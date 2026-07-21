@@ -7,7 +7,7 @@
 ## 1. 프로젝트 개요
 - **목적**: 기존 단지 전체 평균 회전율의 왜곡(대형/소형 평형의 거래 편차 미반영)을 해결하기 위해 **'평형별(전용면적대별) 세대수 대비 거래량'**을 계산하고, 이를 모바일에 최적화된 웹 대시보드로 제공.
 - **주요 기능**:
-  1. **실제 데이터 일괄 수집(Batch Collector)**: 국토부 실거래가 API, 한국부동산원 단지식별 API, K-apt 평형정보 API를 실키(`b50f1ff0fe1d5f2c7b8b658a870258a2653408e872606d334dd042bf1c54bf99`)로 호출하여 전량 데이터 수집 및 로컬 캐싱.
+  1. **실제 데이터 일괄 수집(Batch Collector)**: 국토부 실거래가 API, 한국부동산원 단지식별 API, K-apt 평형정보 API를 실키(`<YOUR_SERVICE_KEY>`, 실제 값은 `.env` 파일의 `DATA_GO_KR_SERVICE_KEY` 환경변수를 사용합니다)로 호출하여 전량 데이터 수집 및 로컬 캐싱.
   2. **회전율 연산 엔진**: 전용면적 기준 오차 매핑(±0.5㎡)을 적용한 평형별 회전율 산출.
   3. **웹뷰 최적화 UI/UX**: 모바일 앱 내 탑재될 수 있도록 HSL 기반 Sleek Dark Mode 디자인 시스템을 적용한 대시보드 화면 제공.
 
@@ -55,20 +55,20 @@ graph TD
 
 ### 1) 국토교통부 아파트 매매 실거래 상세자료 조회 서비스
 - **Endpoint**: `https://apis.data.go.kr/1613000/RTMSDataSvcAptTradeDev/getAptTradeDevLimit`
-- **인증키**: `b50f1ff0fe1d5f2c7b8b658a870258a2653408e872606d334dd042bf1c54bf99` (포털 제공 인코딩/디코딩 호환 키)
+- **인증키**: `<YOUR_SERVICE_KEY>` (포털 제공 인코딩/디코딩 호환 키, 실제 값은 `.env` 파일의 `DATA_GO_KR_SERVICE_KEY` 환경변수를 사용합니다)
 - **요청 방식**: `GET`
 - **요청 변수**: `LAWD_CD` (법정동 5자리), `DEAL_YMD` (계약월 YYYYMM)
 
 ### 2) 한국부동산원 공동주택 단지 식별정보 조회 서비스 (ODCloud 연계)
 - **Base URL**: `https://api.odcloud.kr/api`
 - **Endpoint**: `/AptIdInfoSvc/v1/getAptInfo`
-- **인증키**: `b50f1ff0fe1d5f2c7b8b658a870258a2653408e872606d334dd042bf1c54bf99` (Authorization 헤더 또는 쿼리 `serviceKey`로 전달)
+- **인증키**: `<YOUR_SERVICE_KEY>` (Authorization 헤더 또는 쿼리 `serviceKey`로 전달, 실제 값은 `.env` 파일의 `DATA_GO_KR_SERVICE_KEY` 환경변수를 사용합니다)
 - **요청 방식**: `GET`
 - **요청 변수**: `cond[ADRES::LIKE]` (동/주소명 매칭), `page`, `perPage`
 
 ### 3) K-apt 공동주택 단지 평형 정보 조회 서비스
 - **Endpoint**: `http://apis.data.go.kr/1611000/AptScrapService/getAptAreaInfo`
-- **인증키**: `b50f1ff0fe1d5f2c7b8b658a870258a2653408e872606d334dd042bf1c54bf99`
+- **인증키**: `<YOUR_SERVICE_KEY>` (실제 값은 `.env` 파일의 `DATA_GO_KR_SERVICE_KEY` 환경변수를 사용합니다)
 - **요청 방식**: `GET`
 - **요청 변수**: `kaptCode` (단지 식별 코드)
 
