@@ -1117,6 +1117,13 @@ function listenOnPort(port, preferredPort) {
 // 커밋된 최초 상태로 되돌아갑니다(사용자가 이미 조회했던 단지를 또 처음부터 조회하게
 // 되는 원인). REMOTE_STORAGE_*가 설정돼 있으면 원격 사본으로 로컬 파일을 먼저
 // 덮어써서 이전 기동에서 쌓인 캐시를 복구합니다. 미설정 시 조용히 건너뜁니다.
+//
+// bjdong_code_cache.json/expos_pubuse_area_cache.json(수십 KB) 두 개에만 씁니다 -
+// turnover_results.json(약 45MB)까지 이 방식으로 매 기동마다 통째로 내려받으면 그
+// 다운로드+버퍼링만으로 Render 무료 플랜의 512MB 메모리 한도를 넘겨 OOM으로 죽었다가
+// 재시작되는 걸 반복하는 문제가 실제로 발생했습니다(2026-07-23 확인). 등기 API를
+// 다시 호출하지 않게 만드는 데 필요한 건 이 두 캐시뿐이라(실제 조회 결과가 여기 있고,
+// turnover_results.json 반영은 화면 표시용 부가 기능), 큰 파일은 로컬 디스크에만 둡니다.
 async function hydrateFromRemoteIfConfigured(localPath, remoteKey) {
   if (!isRemoteStorageConfigured()) return;
   const remoteData = await getRemoteObject(remoteKey);
@@ -1965,11 +1972,6 @@ async function runPipeline() {
 const SERVE_ONLY = process.env.SERVE_ONLY === "true";
 
 async function main() {
-  // SERVE_ONLY 모드(운영 배포)든 아니든, 원격 사본이 있으면 먼저 복구합니다 - 로컬
-  // 파이프라인을 도는 경우엔 어차피 pipeline 종료 시 이 파일을 다시 통째로 덮어쓰므로
-  // 무해합니다.
-  await hydrateFromRemoteIfConfigured(path.join(__dirname, "turnover_results.json"), "turnover_results.json");
-
   if (!SERVE_ONLY) {
     try {
       await runPipeline();
