@@ -1839,7 +1839,12 @@ function buildAreaRowHtml(item, opts = {}) {
   // 그룹 안의 개별 평형에는 절대 붙지 않도록 합니다. 세대수가 추정치(등기/청약홈으로
   // 확정되지 않은 estimated/mixed)인 평형은 회전율 분모 자체가 부정확할 수 있어
   // 후보에서 제외합니다 - 애초에 maxTurnoverRate 계산에서도 빠져 있습니다(renderTableData).
-  const bestSellerBadgeHtml = maxTurnoverRate >= 0
+  // maxTurnoverRate는 0보다 커야 합니다(>= 0이 아님) - 신축 등 조회 기간 내 거래가
+  // 전혀 없는 단지는 모든 평형의 회전율이 0이라, >= 0으로는 거래가 0건인 평형 전부가
+  // "최댓값(0)과 같다"는 이유로 배지를 받아버립니다(실제로 재현된 버그: 디에이치 방배
+  // 처럼 매매 이력이 아예 없는 신축 단지에서 모든 평형에 배지가 붙음). 거래가 하나도
+  // 없으면 "가장 잘 팔린다"고 말할 근거 자체가 없으므로 배지를 아예 붙이지 않습니다.
+  const bestSellerBadgeHtml = maxTurnoverRate > 0
     && item.turnover_rate === maxTurnoverRate
     && unitsMode !== "estimated" && unitsMode !== "mixed"
     ? `<span class="best-seller-badge" title="이 단지에서 조회 기간 동안 회전율(팔림지수)이 가장 높았던 평형입니다">🏆 가장 잘 팔려요!</span>`
