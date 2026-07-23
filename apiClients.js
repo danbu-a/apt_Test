@@ -260,7 +260,13 @@ const BLD_RGST_MIN_INTERVAL_MS = 150; // 초당 약 6~7건으로 제한
 
 // 일일 트래픽 한도(quota) 초과가 감지되면 true로 전환되어, 이후의 모든 요청을 즉시 스킵합니다.
 // (재시도/대기를 반복해봐야 quota가 리셋되기 전까지는 절대 성공하지 않으므로 시간 낭비를 방지합니다.)
+// data.go.kr의 일일 한도는 자정에 초기화되는데, 이 플래그는 그걸 모르고 프로세스가 재시작되기
+// 전까지 계속 막혀 있었습니다(배포 환경은 재기동이 뜸해서 하루 이상 등기 조회 전체가 막히는
+// 원인이 됨) - 그래서 언제 막혔는지(bldRgstQuotaExceededAt)를 같이 기록해두고, 24시간이
+// 지나면 한도가 리셋됐을 것으로 보고 자동으로 다시 시도를 허용합니다.
 let bldRgstQuotaExceeded = false;
+let bldRgstQuotaExceededAt = 0;
+const BLD_RGST_QUOTA_LOCKOUT_MS = 24 * 60 * 60 * 1000;
 
 async function waitForBldRgstRateLimitSlot() {
   const now = Date.now();
@@ -281,7 +287,10 @@ export class BldRgstClient {
   // apis.data.go.kr가 Node fetch(undici)와 간헐적으로 연결이 끊기는 사례가 있어(HTTP/1.1 전용 +
   // keep-alive 처리 이슈로 추정, curl은 정상 동작) 최대 3회까지 짧은 대기 후 재시도합니다.
   async _fetchOperation(operation, params, attempt = 1, numOfRows = 5, pageNo = 1) {
-    if (bldRgstQuotaExceeded) return undefined;
+    if (bldRgstQuotaExceeded) {
+      if (Date.now() - bldRgstQuotaExceededAt < BLD_RGST_QUOTA_LOCKOUT_MS) return undefined;
+      bldRgstQuotaExceeded = false; // 막힌 지 24시간이 지나 한도가 리셋됐을 것으로 보고 재시도를 허용합니다.
+    }
 
     const MAX_ATTEMPTS = 3;
     const url = new URL(`${this.baseUrl}/${operation}`);
@@ -304,7 +313,8 @@ export class BldRgstClient {
         const bodyText = await response.text().catch(() => "");
         if (/quota/i.test(bodyText)) {
           bldRgstQuotaExceeded = true;
-          console.error(`[건축HUB API] 일일 요청 한도(quota) 초과가 감지되어 이후 요청을 모두 스킵합니다. 응답: ${bodyText}`);
+          bldRgstQuotaExceededAt = Date.now();
+          console.error(`[건축HUB API] 일일 요청 한도(quota) 초과가 감지되어 이후 24시간 동안 요청을 모두 스킵합니다. 응답: ${bodyText}`);
           return undefined;
         }
         const err = new Error(`HTTP error! status: ${response.status}`);
