@@ -6,6 +6,7 @@ import { Worker } from "worker_threads";
 import * as config from "./config.js";
 import { MolitAptTradeClient, RebAptInfoClient, ROneStatsClient, BldRgstClient, LegalDongCodeClient } from "./apiClients.js";
 import { ApartmentTurnoverProcessor } from "./processor.js";
+import { getRemoteObject, putRemoteObject, isRemoteStorageConfigured } from "./remoteStorage.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -135,7 +136,7 @@ async function resolveBjdongCd(guName, dong) {
   if (code === undefined) return undefined; // 네트워크 오류: 캐싱하지 않고 다음 호출에 재시도
 
   bjdongCodeCache[cacheKey] = code; // null도 그대로 캐싱(같은 동을 매번 재조회하지 않기 위함)
-  await saveCache(bjdongCodeCache, BJDONG_CODE_CACHE_PATH);
+  await saveCache(bjdongCodeCache, BJDONG_CODE_CACHE_PATH, "bjdong_code_cache.json");
   return code;
 }
 
@@ -263,7 +264,7 @@ function fetchUnitTypesForAptKey(aptKey, targetUnitCount) {
 async function cacheAndReturn(aptKey, result) {
   const cached = { ...result, schema: EXPOS_CACHE_SCHEMA, fetchedAt: Date.now() };
   exposPubuseAreaCache[aptKey] = cached;
-  await saveCache(exposPubuseAreaCache, EXPOS_PUBUSE_AREA_CACHE_PATH);
+  await saveCache(exposPubuseAreaCache, EXPOS_PUBUSE_AREA_CACHE_PATH, "expos_pubuse_area_cache.json");
   return cached;
 }
 
@@ -382,7 +383,7 @@ async function fetchUnitTypesForAptKeyUncached(aptKey, targetUnitCount) {
     : { status: "not_found", schema: EXPOS_CACHE_SCHEMA, message: "건축물대장 전유부에서 이 주소의 공동주택 세대 정보를 찾지 못했습니다.", fetchedAt: Date.now() };
 
   exposPubuseAreaCache[aptKey] = result;
-  await saveCache(exposPubuseAreaCache, EXPOS_PUBUSE_AREA_CACHE_PATH);
+  await saveCache(exposPubuseAreaCache, EXPOS_PUBUSE_AREA_CACHE_PATH, "expos_pubuse_area_cache.json");
   return result;
 }
 
@@ -529,9 +530,16 @@ async function loadCache(filepath) {
   }
 }
 
-async function saveCache(cacheObj, filepath) {
+// remoteKey를 주면(등기 온디맨드 캐시 2종만 해당) 로컬 저장 후 같은 내용을 원격
+// 저장소에도 이중화합니다 - Render 재기동으로 로컬 디스크가 초기화돼도 다음 기동 시
+// hydrateFromRemoteIfConfigured()가 이 원격 사본으로 복구합니다. 나머지 캐시(실거래가
+// 원본, K-apt/REB 매칭 등)는 배치 파이프라인이 재수집 가능하므로 remoteKey 없이 기존과
+// 동일하게 로컬 전용으로 둡니다.
+async function saveCache(cacheObj, filepath, remoteKey) {
   try {
-    await writeFile(filepath, JSON.stringify(cacheObj, null, 2), "utf-8");
+    const json = JSON.stringify(cacheObj, null, 2);
+    await writeFile(filepath, json, "utf-8");
+    if (remoteKey) await putRemoteObject(remoteKey, json);
   } catch (err) {
     console.error(`[CACHE ERROR] 캐시 파일 ${filepath} 저장 실패: ${err.message}`);
   }
@@ -1104,7 +1112,24 @@ function listenOnPort(port, preferredPort) {
   });
 }
 
+// Render 등 배포 환경은 재배포/유휴 재기동마다 컨테이너를 이미지에서 새로 띄우기
+// 때문에, 이전 기동 중 로컬 디스크에 쌓인 등기 온디맨드 캐시가 그대로 사라지고 git에
+// 커밋된 최초 상태로 되돌아갑니다(사용자가 이미 조회했던 단지를 또 처음부터 조회하게
+// 되는 원인). REMOTE_STORAGE_*가 설정돼 있으면 원격 사본으로 로컬 파일을 먼저
+// 덮어써서 이전 기동에서 쌓인 캐시를 복구합니다. 미설정 시 조용히 건너뜁니다.
+async function hydrateFromRemoteIfConfigured(localPath, remoteKey) {
+  if (!isRemoteStorageConfigured()) return;
+  const remoteData = await getRemoteObject(remoteKey);
+  if (remoteData) {
+    await writeFile(localPath, remoteData);
+    console.log(`[원격 저장소] ${remoteKey} 원격 사본으로 로컬 파일을 복구했습니다 (${remoteData.length.toLocaleString()} bytes)`);
+  }
+}
+
 async function startStaticServer() {
+  await hydrateFromRemoteIfConfigured(BJDONG_CODE_CACHE_PATH, "bjdong_code_cache.json");
+  await hydrateFromRemoteIfConfigured(EXPOS_PUBUSE_AREA_CACHE_PATH, "expos_pubuse_area_cache.json");
+
   bjdongCodeCache = await loadCache(BJDONG_CODE_CACHE_PATH);
   exposPubuseAreaCache = await loadCache(EXPOS_PUBUSE_AREA_CACHE_PATH);
   console.log(`[전유공용면적 온디맨드 캐시] 법정동코드 캐시 ${Object.keys(bjdongCodeCache).length}건, 세대면적 캐시 ${Object.keys(exposPubuseAreaCache).length}건 로드 완료`);
@@ -1940,6 +1965,11 @@ async function runPipeline() {
 const SERVE_ONLY = process.env.SERVE_ONLY === "true";
 
 async function main() {
+  // SERVE_ONLY 모드(운영 배포)든 아니든, 원격 사본이 있으면 먼저 복구합니다 - 로컬
+  // 파이프라인을 도는 경우엔 어차피 pipeline 종료 시 이 파일을 다시 통째로 덮어쓰므로
+  // 무해합니다.
+  await hydrateFromRemoteIfConfigured(path.join(__dirname, "turnover_results.json"), "turnover_results.json");
+
   if (!SERVE_ONLY) {
     try {
       await runPipeline();

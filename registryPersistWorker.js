@@ -8,6 +8,7 @@ import { parentPort } from "worker_threads";
 import { readFile, writeFile, rename } from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
+import { putRemoteObject } from "./remoteStorage.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const TURNOVER_RESULTS_PATH = path.join(__dirname, "turnover_results.json");
@@ -151,9 +152,15 @@ async function persistRegistryMatchToResultsLocked(aptKey, result) {
     // 재시작돼도 원본 turnover_results.json은 마지막으로 완성된 상태 그대로 남습니다
     // (rename은 같은 파일시스템 안에서 원자적 교체입니다. 직전 실패로 남은 .tmp 찌꺼기가
     // 있어도 다음 저장이 그 자리를 덮어쓰므로 문제 없습니다).
-    await writeFile(TURNOVER_RESULTS_TMP_PATH, JSON.stringify(allResults, null, 2), "utf-8");
+    const json = JSON.stringify(allResults, null, 2);
+    await writeFile(TURNOVER_RESULTS_TMP_PATH, json, "utf-8");
     await rename(TURNOVER_RESULTS_TMP_PATH, TURNOVER_RESULTS_PATH);
     console.log(`[등기 실측 영구반영] ${aptKey}: 갱신 ${updatedCount}건, 추가 ${addedCount}건 -> turnover_results.json 반영 완료 (CSV는 다음 배치 파이프라인 실행 시 갱신됩니다)`);
+
+    // 로컬 반영 성공 직후, 원격 저장소(REMOTE_STORAGE_* 설정 시)에도 같은 내용을
+    // 이중화합니다 - Render 재기동으로 로컬 디스크가 초기화돼도 다음 기동 시 이
+    // 원격 사본으로 복구됩니다(index.js의 hydrateFromRemoteIfConfigured 참고).
+    await putRemoteObject("turnover_results.json", json);
   } catch (err) {
     console.error(`[등기 실측 영구반영 실패] ${aptKey}: ${err.message}`);
   }
