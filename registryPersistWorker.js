@@ -155,7 +155,7 @@ async function persistRegistryMatchToResultsLocked(aptKey, result) {
     // 사용량이 몇 배로 튀어 Render 무료 플랜(512MB)에서 OOM으로 죽는 문제가 실제로
     // 발생했습니다. 등기 API 재호출을 막는 데 필요한 캐시(bjdong/expos, 수십 KB)는
     // 이미 원격에 이중화되므로, 이 파일은 로컬 디스크에만 반영합니다.
-    await writeFile(TURNOVER_RESULTS_TMP_PATH, JSON.stringify(allResults, null, 2), "utf-8");
+    await writeFile(TURNOVER_RESULTS_TMP_PATH, JSON.stringify(allResults), "utf-8");
     await rename(TURNOVER_RESULTS_TMP_PATH, TURNOVER_RESULTS_PATH);
     console.log(`[등기 실측 영구반영] ${aptKey}: 갱신 ${updatedCount}건, 추가 ${addedCount}건 -> turnover_results.json 반영 완료 (CSV는 다음 배치 파이프라인 실행 시 갱신됩니다)`);
   } catch (err) {

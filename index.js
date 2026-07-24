@@ -1,4 +1,5 @@
 import { writeFile, readFile } from "fs/promises";
+import { createReadStream } from "fs";
 import http from "http";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -537,7 +538,7 @@ async function loadCache(filepath) {
 // 동일하게 로컬 전용으로 둡니다.
 async function saveCache(cacheObj, filepath, remoteKey) {
   try {
-    const json = JSON.stringify(cacheObj, null, 2);
+    const json = JSON.stringify(cacheObj);
     await writeFile(filepath, json, "utf-8");
     if (remoteKey) await putRemoteObject(remoteKey, json);
   } catch (err) {
@@ -1072,19 +1073,26 @@ function createStaticServer(actualPort, preferredPort) {
     const ext = path.extname(filePath).toLowerCase();
     const contentType = MIME_TYPES[ext] || "text/plain";
 
-    try {
-      const data = await readFile(filePath);
+    // 큰 정적 파일(turnover_results.json 등 수십 MB)을 요청마다 통째로 메모리에 버퍼링하지
+    // 않도록 스트리밍으로 응답합니다 - Render 무료 플랜(512MB)에서 동시 요청이 겹치면
+    // 버퍼링 방식은 요청당 파일 크기만큼 메모리를 추가로 잡아먹습니다.
+    const stream = createReadStream(filePath);
+    let headersSent = false;
+    stream.once("open", () => {
+      headersSent = true;
       res.writeHead(200, withCorsHeaders({
         "Content-Type": contentType,
         "Cache-Control": "no-cache, no-store, must-revalidate",
         "Pragma": "no-cache",
         "Expires": "0"
       }));
-      res.end(data);
-    } catch (err) {
+      stream.pipe(res);
+    });
+    stream.on("error", () => {
+      if (headersSent) { res.destroy(); return; }
       res.writeHead(404, withCorsHeaders({ "Content-Type": "text/plain; charset=utf-8" }));
       res.end("404 Not Found: 파일을 찾을 수 없습니다.");
-    }
+    });
   });
 
   return server;
@@ -1209,6 +1217,13 @@ async function runPipeline() {
   // 마감된) 달만 캐시를 신뢰합니다.
   const recentYmdSet = new Set(dealYmdList.slice(-REFRESH_RECENT_MONTHS));
 
+  // 진행률/예상 남은 시간 로그용. ETA는 지금까지 처리한 항목의 평균 소요시간 기준으로
+  // 매 항목마다 다시 계산합니다(캐시 히트로 건너뛴 항목은 거의 즉시 끝나고 실제 API
+  // 호출 항목만 느리므로, 실행 중 캐시 미스 비율이 바뀌면 ETA도 그에 맞춰 조정됩니다).
+  const totalTradeCombinations = targetLawdCds.length * dealYmdList.length;
+  let completedTradeCombinations = 0;
+  const tradeCollectionStartedAt = Date.now();
+
   for (const lawdCd of targetLawdCds) {
     for (const dealYmd of dealYmdList) {
       const cacheKey = `${lawdCd}_${dealYmd}`;
@@ -1228,6 +1243,14 @@ async function runPipeline() {
         await saveCache(molitTradeCache, rawCachePath);
         await sleep(800);
       }
+
+      completedTradeCombinations++;
+      const elapsedMs = Date.now() - tradeCollectionStartedAt;
+      const avgMsPerItem = elapsedMs / completedTradeCombinations;
+      const remainingItems = totalTradeCombinations - completedTradeCombinations;
+      const etaMin = Math.round((avgMsPerItem * remainingItems) / 60000);
+      const pct = ((completedTradeCombinations / totalTradeCombinations) * 100).toFixed(1);
+      console.log(`[진행률] ${completedTradeCombinations}/${totalTradeCombinations} (${pct}%) | 경과 ${Math.round(elapsedMs / 60000)}분 | 예상 남은 시간 약 ${etaMin}분`);
     }
   }
 
